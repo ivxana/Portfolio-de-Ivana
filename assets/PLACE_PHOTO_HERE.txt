@@ -1,0 +1,9 @@
+Drop your photo here and name it: ivana.jpg
+
+Recommended specs:
+- Portrait orientation
+- High resolution (at least 800x1000px)
+- JPG or PNG format
+
+If you use a PNG or different filename, update the src in index.html:
+  <img src="assets/YOUR_FILENAME_HERE" alt="Ivana" />
