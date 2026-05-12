@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Esther\\\\Downloads\" -File | Where-Object { $_.Extension -match \"\\\\.\\(jpg|jpeg|png|webp|gif\\)$\" } | Sort-Object LastWriteTime -Descending | ForEach-Object { \"$\\($_.LastWriteTime.ToString\\('yyyy-MM-dd HH:mm'\\)\\) | $\\($_.Name\\)\" })"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Esther\\Downloads"
+    ]
+  }
+}
