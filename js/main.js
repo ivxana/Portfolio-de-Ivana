@@ -68,9 +68,13 @@ function setActiveNav() {
   });
 
   navLinks.forEach(link => {
+    link.parentElement.querySelector('.nav-num').style.opacity = '';
     link.style.color = '';
+    link.style.fontWeight = '';
     if (link.getAttribute('href') === `#${current}`) {
-      link.style.color = 'var(--purple)';
+      link.style.color = '#ffffff';
+      link.style.fontWeight = '700';
+      link.parentElement.querySelector('.nav-num').style.opacity = '1';
     }
   });
 }

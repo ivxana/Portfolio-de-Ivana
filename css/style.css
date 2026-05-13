@@ -212,7 +212,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .hero-photo {
   position: relative;
   overflow: hidden;
-  background: var(--cream-dark);
+  background: var(--cream);
 }
 
 .photo-brush {
@@ -221,7 +221,6 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   height: 60%;
   background: var(--purple);
   clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
-  opacity: 0.85;
   z-index: 0;
 }
 
