@@ -237,10 +237,8 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .photo-frame img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  mix-blend-mode: luminosity;
-  filter: grayscale(20%) contrast(1.05);
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 .photo-frame.no-photo {
@@ -295,7 +293,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   align-items: flex-start;
 }
 
-.drive-icon { font-size: 16px; margin-top: 2px; flex-shrink: 0; }
+.drive-icon { display: flex; align-items: center; margin-top: 2px; flex-shrink: 0; color: var(--purple); }
 
 .drive-item strong {
   font-size: 12px;
@@ -781,7 +779,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   align-items: flex-start;
 }
 
-.curr-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.curr-icon { display: flex; align-items: center; flex-shrink: 0; margin-top: 2px; color: var(--purple); }
 
 .curr-label {
   font-size: 10px;
