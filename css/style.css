@@ -849,33 +849,12 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .footer-badge { display: flex; align-items: center; justify-content: center; }
 
-.badge-ring {
-  position: relative;
-  width: 110px; height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer-initial {
+  width: 120px;
+  height: auto;
+  filter: invert(1) brightness(20);
+  mix-blend-mode: screen;
 }
-
-.badge-svg {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  color: rgba(255,255,255,0.5);
-  animation: spin 20s linear infinite;
-}
-
-.badge-center {
-  font-family: var(--font-display);
-  font-size: 24px;
-  font-weight: 900;
-  font-style: italic;
-  color: var(--white);
-  position: relative;
-  z-index: 1;
-}
-
-@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ============================================================
    ANIMATIONS — PAGE LOAD
