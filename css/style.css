@@ -43,8 +43,8 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   position: fixed;
   left: 0; top: 0; bottom: 0;
   width: var(--sidenav-w);
-  background: var(--cream);
-  border-right: 1px solid var(--gray-light);
+  background: var(--purple-dark);
+  border-right: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,6 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   z-index: 100;
 }
 
-.sidenav-top { margin-bottom: auto; }
 .star, .quote-star, .identity-star, .small-star { color: var(--purple); font-size: 18px; }
 
 .sidenav-links {
@@ -71,7 +70,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .nav-num {
   font-size: 9px;
-  color: var(--purple);
+  color: rgba(255,255,255,0.5);
   font-family: var(--font-body);
   font-weight: 400;
 }
@@ -80,12 +79,12 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--purple);
+  color: var(--cream);
   transition: color 0.2s;
   text-align: center;
 }
 
-.sidenav-links a:hover { color: var(--purple-dark); }
+.sidenav-links a:hover { color: var(--white); }
 
 /* ============================================================
    MAIN CONTENT
