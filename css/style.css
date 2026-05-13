@@ -58,7 +58,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .sidenav-links {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 22px;
   align-items: center;
 }
 
@@ -898,6 +898,177 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 @keyframes fadeIn {
   to { opacity: 1; }
+}
+
+/* ============================================================
+   LANGUAGES SECTION
+   ============================================================ */
+.languages-section {
+  background: var(--purple);
+  padding: 48px 40px 48px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.languages-inner { max-width: 640px; }
+
+.languages-section .section-label {
+  color: rgba(255,255,255,0.6);
+  border-bottom-color: rgba(255,255,255,0.2);
+  margin-bottom: 28px;
+}
+
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lang-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 110px;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.lang-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.lang-fill {
+  height: 100%;
+  background: var(--white);
+  border-radius: 2px;
+}
+
+.lang-level {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.08em;
+  text-align: right;
+}
+
+/* ============================================================
+   LEADERSHIP & EXPERIENCE SECTION
+   ============================================================ */
+.leadership-section {
+  background: var(--cream);
+  padding: 60px 0 60px 40px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.leadership-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 48px;
+  padding-right: 40px;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.exp-item:first-child { padding-top: 0; }
+
+.exp-date {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--purple);
+  letter-spacing: 0.06em;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--black);
+}
+
+.exp-org {
+  font-size: 12px;
+  color: var(--purple);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.exp-desc {
+  font-size: 13px;
+  color: var(--gray-text);
+  line-height: 1.65;
+}
+
+/* ============================================================
+   TOOLS & STRENGTHS SECTION
+   ============================================================ */
+.tools-section {
+  background: var(--cream-dark);
+  padding: 60px 40px;
+  border-bottom: 1px solid var(--gray-light);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.tools-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.tools-sub {
+  font-size: 13px;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.tool-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1.5px solid var(--purple);
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tool-tag:hover {
+  background: var(--purple);
+  color: var(--white);
 }
 
 /* ============================================================
