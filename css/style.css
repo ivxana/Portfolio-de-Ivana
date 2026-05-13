@@ -874,6 +874,130 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 /* ============================================================
+   ABOUT ME PAGE SECTION
+   ============================================================ */
+.about-page-section {
+  background: var(--cream);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.about-page-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 64px 40px 48px 40px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.about-page-headline {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.about-page-body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.about-bio {
+  padding: 56px 56px 56px 40px;
+  border-right: 1px solid var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-bio-lead {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.55;
+  color: var(--black);
+  font-weight: 400;
+}
+
+.about-bio p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--gray-text);
+}
+
+.about-facts {
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.fact-block { display: flex; flex-direction: column; }
+
+.fact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.fact-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.fact-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.fact-detail {
+  font-size: 11px;
+  color: var(--gray-text);
+  letter-spacing: 0.04em;
+}
+
+.about-page-quote {
+  background: var(--purple);
+  padding: 64px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 28px);
+  color: var(--white);
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+.about-quote-cta {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  padding: 12px 24px;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+}
+
+.about-quote-cta:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--white);
+}
+
+/* ============================================================
    LANGUAGES SECTION
    ============================================================ */
 .languages-section {
@@ -1054,6 +1178,13 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .sticky-col, .currently-col { grid-column: span 1; }
 }
 
+@media (max-width: 1100px) {
+  .about-page-body { grid-template-columns: 1fr; }
+  .about-bio { border-right: none; border-bottom: 1px solid var(--gray-light); padding: 40px; }
+  .about-facts { padding: 40px; }
+  .about-page-quote { flex-direction: column; align-items: flex-start; }
+}
+
 @media (max-width: 768px) {
   :root { --sidenav-w: 0px; }
   .sidenav { display: none; }
@@ -1063,7 +1194,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .notes-grid { grid-template-columns: 1fr; }
   .beliefs-section { grid-template-columns: 1fr; }
   .footer { grid-template-columns: 1fr; }
-  .badge-ring { display: none; }
   .topbar { padding: 16px 20px; }
   .hero-left { padding: 40px 20px; }
+  .tools-section { grid-template-columns: 1fr; }
+  .lang-item { grid-template-columns: 80px 1fr; }
+  .lang-level { display: none; }
 }
