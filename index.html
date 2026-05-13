@@ -28,7 +28,7 @@
 
     <!-- TOP BAR -->
     <header class="topbar">
-      <div class="logo">IVANA.</div>
+      <img src="assets/signature.png" alt="Ivana" class="logo-sig" />
       <a href="#contact" class="connect-link">LET'S CONNECT ↗</a>
     </header>
 
@@ -47,7 +47,21 @@
       </div>
 
       <div class="hero-photo">
-        <div class="photo-brush"></div>
+        <div class="photo-brush">
+          <svg class="brush-svg" viewBox="0 0 340 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="brush-texture" x="-8%" y="-8%" width="116%" height="116%">
+                <feTurbulence type="turbulence" baseFrequency="0.03 0.02" numOctaves="5" seed="12" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+              </filter>
+            </defs>
+            <path
+              d="M -8,210 C 10,202 28,193 55,186 C 78,180 98,177 122,173 C 148,168 165,164 192,160 C 216,156 238,153 262,149 C 288,145 312,140 348,134 L 348,608 L -8,608 Z"
+              fill="#1c0252"
+              filter="url(#brush-texture)"
+            />
+          </svg>
+        </div>
         <div class="photo-frame">
           <img src="assets/ivana.png" alt="Ivana" />
         </div>
