@@ -897,18 +897,15 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 .about-page-body {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 0;
   border-bottom: 1px solid var(--gray-light);
 }
 
 .about-bio {
-  padding: 56px 56px 56px 40px;
-  border-right: 1px solid var(--gray-light);
+  padding: 56px 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 780px;
 }
 
 .about-bio-lead {
