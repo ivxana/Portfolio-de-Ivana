@@ -1,4 +1,55 @@
 /* ============================================================
+   TKS PROJECTS GRID
+   ============================================================ */
+.tks-projects-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0 0 24px;
+}
+.tks-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.tks-project-card {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tks-project-num {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  opacity: 0.35;
+}
+.tks-project-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+}
+.tks-project-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(28,2,82,0.65);
+  margin: 0;
+}
+
+/* Arrow emoji fix for all project pages */
+.connect-link, .view-project, .platform-follow-link,
+.platform-article-arrow, .article-read-link {
+  font-variant-emoji: text;
+}
+
+/* ============================================================
    PROJECT PAGE
    ============================================================ */
 
