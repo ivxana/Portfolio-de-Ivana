@@ -61,6 +61,26 @@
   color: rgba(28,2,82,0.65);
   margin: 0;
 }
+.tks-project-card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tks-project-card-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(28,2,82,0.12);
+}
+.tks-project-view {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  opacity: 0.55;
+  margin-top: 4px;
+  transition: opacity 0.15s;
+  font-variant-emoji: text;
+}
+.tks-project-card-link:hover .tks-project-view { opacity: 1; }
 
 /* Arrow emoji fix for all project pages */
 .connect-link, .view-project, .platform-follow-link,

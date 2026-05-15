@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TKS × UN — Ivana Okpakovwodo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="stylesheet" href="../css/tks-un.css" />
+</head>
+<body>
+
+  <nav class="sidenav">
+    <ul class="sidenav-links">
+      <li><span class="nav-num">01</span><a href="../index.html#about">ABOUT</a></li>
+      <li><span class="nav-num">02</span><a href="../index.html#work">WORK</a></li>
+      <li><span class="nav-num">03</span><a href="../index.html#writing">WRITING</a></li>
+      <li><span class="nav-num">04</span><a href="../index.html#notes">NOTES</a></li>
+      <li><span class="nav-num">05</span><a href="../index.html#tools">TOOLS</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <a href="../index.html"><img src="../assets/signature.png" alt="Ivana" class="logo-sig" /></a>
+      <a href="tks.html" class="connect-link">← BACK TO TKS</a>
+    </header>
+
+    <div class="project-page">
+
+      <div class="project-page-hero">
+        <img src="../assets/tks-un-thumbnail.jpg" alt="TKS × UN" class="project-page-cover" />
+      </div>
+
+      <div class="project-page-body">
+
+        <div class="project-page-meta">
+          <span class="project-page-num">TKS × UN</span>
+          <span class="project-page-tag">Humanitarian Tech · Conflict Prevention</span>
+        </div>
+
+        <h1 class="project-page-title">Anticipating Conflict<br/>Before Escalation</h1>
+        <p class="project-page-subtitle">Using environmental pressure modelling and satellite intelligence to identify high-risk cattle convergence zones in South Sudan before violence occurs.</p>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Context -->
+        <div class="tks-un-section">
+          <p class="tks-un-text">In South Sudan, climate volatility has disrupted traditional cattle migration routes, forcing pastoral communities into the same grazing corridors in search of water and viable pasture. As environmental pressure intensifies, competition over limited resources increasingly contributes to local conflict and humanitarian instability.</p>
+          <p class="tks-un-text">Our team explored how environmental signals could be transformed into an upstream early-warning system, enabling humanitarian organizations to identify high-risk convergence zones before violence escalates.</p>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- The Problem -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">The Problem</p>
+          <h2 class="tks-un-heading">Conflict wasn't the starting point.</h2>
+          <p class="tks-un-text">Most conflict monitoring systems are reactive by design. They begin tracking risk after violence, displacement, or territorial tension has already emerged.</p>
+          <p class="tks-un-text">But in South Sudan, conflict often begins much earlier — through environmental pressure.</p>
+          <p class="tks-un-text">As droughts intensify, flooding blocks routes, and grazing land degrades, cattle movement becomes forced rather than voluntary. Multiple groups are then pushed toward the same habitable zones, compressing negotiation windows from months into days.</p>
+
+          <div class="pressure-chain">
+            <div class="chain-step">Environmental Pressure</div>
+            <span class="chain-arrow">&#x2192;&#xFE0E;</span>
+            <div class="chain-step">Forced Movement</div>
+            <span class="chain-arrow">&#x2192;&#xFE0E;</span>
+            <div class="chain-step">Convergence Zones</div>
+            <span class="chain-arrow">&#x2192;&#xFE0E;</span>
+            <div class="chain-step chain-step-conflict">Conflict</div>
+          </div>
+
+          <p class="tks-un-text">Rather than treating conflict as the primary signal, we reframed cattle movement itself as an early-warning opportunity.</p>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Core Insight -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">Core Insight</p>
+          <h2 class="tks-un-heading">Movement is a survival decision.</h2>
+          <p class="tks-un-text">Pastoral communities do not move cattle randomly. Movement patterns are heavily influenced by:</p>
+
+          <ul class="tks-un-factors">
+            <li>Rainfall variability</li>
+            <li>Vegetation stress</li>
+            <li>Flooding exposure</li>
+            <li>Water accessibility</li>
+            <li>Environmental habitability</li>
+          </ul>
+
+          <p class="tks-un-text">This means cattle migration can become partially predictable through environmental and geospatial signals. Our team explored whether environmental pressure data could help identify where movement convergence — and therefore conflict risk — was most likely to emerge before escalation occurred.</p>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- What We Built -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">What We Built</p>
+          <h2 class="tks-un-heading">Environmental Early-Warning System</h2>
+          <p class="tks-un-text">We designed a geospatial early-warning framework that continuously monitored environmental stress indicators using open-source satellite and climate datasets. The system translated environmental pressure into ranked geographic priority zones for humanitarian coordination teams.</p>
+
+          <div class="tks-un-two-col">
+            <div class="tks-un-col">
+              <span class="tks-un-col-title">Data Inputs</span>
+              <ul>
+                <li>CHIRPS rainfall anomaly data</li>
+                <li>NDVI vegetation stress analysis</li>
+                <li>Sentinel-1 flood exposure imagery</li>
+                <li>Soil moisture indicators</li>
+                <li>Surface water monitoring</li>
+                <li>Historical conflict validation layers</li>
+              </ul>
+            </div>
+            <div class="tks-un-col">
+              <span class="tks-un-col-title">System Outputs</span>
+              <ul>
+                <li>Tier 1 high-risk convergence zones</li>
+                <li>Tier 2 monitoring regions</li>
+                <li>Environmental pressure alerts</li>
+                <li>Preventative coordination windows</li>
+                <li>Operational deployment recommendations</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="tks-un-text">Instead of predicting individual incidents, the system identified where structural pressure was concentrating risk.</p>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Validation -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">Validation &amp; Signal Testing</p>
+          <h2 class="tks-un-heading">Identifying meaningful spatial patterns</h2>
+          <p class="tks-un-text">To validate whether environmental pressure contained useful forward-looking signals, we tested whether conflict events disproportionately clustered inside environmentally habitable zones. The results suggested that violence was not spatially random.</p>
+
+          <div class="tks-un-signal-block">
+            <span class="tks-un-signal-label">Signal Test 1</span>
+            <p class="tks-un-text">Conflict events showed significant concentration inside environmentally identified habitable zones.</p>
+            <div class="tks-un-stat-row">
+              <div class="tks-un-stat">
+                <span class="tks-un-stat-number">65.6%</span>
+                <span class="tks-un-stat-desc">average conflict capture rate</span>
+              </div>
+              <div class="tks-un-stat">
+                <span class="tks-un-stat-number">3.99&#x00D7;</span>
+                <span class="tks-un-stat-desc">peak lift over baseline probability</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tks-un-signal-block">
+            <span class="tks-un-signal-label">Signal Test 2</span>
+            <p class="tks-un-text">We then modelled overlap corridors where multiple movement pathways converged. These convergence zones produced even stronger conflict concentration signals.</p>
+            <div class="tks-un-stat-row">
+              <div class="tks-un-stat">
+                <span class="tks-un-stat-number">5.75&#x00D7;</span>
+                <span class="tks-un-stat-desc">conflict lift at peak overlap zones</span>
+              </div>
+              <div class="tks-un-stat">
+                <span class="tks-un-stat-number">5–12%</span>
+                <span class="tks-un-stat-desc">of land area covered by targeted overlap zones</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="tks-un-text">The project demonstrated how environmental pressure could potentially serve as an upstream indicator for preventative humanitarian coordination.</p>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Humanitarian Framing -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">Humanitarian Framing</p>
+          <h2 class="tks-un-heading">The goal was not certainty.<br/>The goal was time.</h2>
+          <p class="tks-un-text">The system was designed as a decision-support framework rather than an autonomous prediction engine. Earlier environmental signals could create:</p>
+          <ul class="tks-un-list">
+            <li>More time for mediation</li>
+            <li>Earlier coordination between field teams</li>
+            <li>Better resource positioning</li>
+            <li>Preventative engagement before escalation</li>
+          </ul>
+          <p class="tks-un-callout">Even imperfect early signals can expand the window for action.</p>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Operational Impact -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">Operational Impact</p>
+          <h2 class="tks-un-heading">From reactive response to<br/>preventative coordination</h2>
+          <p class="tks-un-text">Traditional systems often respond after violence has already begun. Our framework explored how environmental intelligence could support:</p>
+          <ul class="tks-un-list">
+            <li>Earlier humanitarian deployment</li>
+            <li>Targeted monitoring of high-risk zones</li>
+            <li>Lower operational response costs</li>
+            <li>Scalable climate-security coordination</li>
+          </ul>
+
+          <div class="tks-un-tier-model">
+            <div class="tks-un-tier tier-2">
+              <span class="tier-label">TIER 2</span>
+              <span class="tier-desc">Monitoring zones — broad surveillance</span>
+            </div>
+            <div class="tks-un-tier tier-1">
+              <span class="tier-label">TIER 1</span>
+              <span class="tier-desc">Overlap zones — rapid preventative engagement</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- My Role -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">My Role</p>
+          <h2 class="tks-un-heading">Humanitarian Systems &amp;<br/>Field Engagement Lead</h2>
+          <ul class="tks-un-role-list">
+            <li>Conducted humanitarian systems research</li>
+            <li>Led expert outreach and stakeholder interviews</li>
+            <li>Grounded the system in operational realities</li>
+            <li>Helped align technical outputs with humanitarian coordination workflows</li>
+            <li>Contributed to preventative intervention framing and strategic communication</li>
+          </ul>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Slide Deck -->
+        <div class="tks-un-section">
+          <p class="tks-un-label">Slide Deck</p>
+          <h2 class="tks-un-heading">Project Presentation</h2>
+          <div class="tks-un-pdf-wrap">
+            <iframe
+              src="../assets/tks-un-deck.pdf"
+              class="tks-un-pdf"
+              title="TKS × UN Slide Deck">
+            </iframe>
+          </div>
+          <a href="../assets/tks-un-deck.pdf" target="_blank" class="tks-un-pdf-link">DOWNLOAD DECK ↗</a>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <div class="footer-left">
+        <h2 class="footer-cta">Let's build<br/>something that<br/>lasts.</h2>
+      </div>
+      <div class="footer-contacts">
+        <a href="mailto:ivyokp@gmail.com" class="footer-contact-link">EMAIL ↗</a>
+        <a href="https://calendly.com/ivyokp/30min?month=2026-05" target="_blank" class="footer-contact-link">BOOK A CALL ↗</a>
+        <a href="https://www.linkedin.com/in/ivana-okpakovwodo/" target="_blank" class="footer-contact-link">LINKEDIN ↗</a>
+        <a href="https://substack.com/@ivanaokpakovwodo" target="_blank" class="footer-contact-link">SUBSTACK ↗</a>
+        <a href="https://medium.com/@ivyokp" target="_blank" class="footer-contact-link">MEDIUM ↗</a>
+      </div>
+      <div class="footer-badge">
+        <img src="../assets/initial.png" alt="I" class="footer-initial" />
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>

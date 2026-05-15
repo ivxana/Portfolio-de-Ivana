@@ -1,0 +1,331 @@
+/* ============================================================
+   TKS × UN DETAIL PAGE
+   ============================================================ */
+
+.tks-un-section {
+  margin-bottom: 0;
+}
+
+.tks-un-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--purple);
+  opacity: 0.4;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.tks-un-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700;
+  color: var(--purple);
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+
+.tks-un-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(28,2,82,0.7);
+  margin-bottom: 16px;
+}
+
+.tks-un-callout {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--purple);
+  padding: 16px 20px;
+  border-left: 3px solid var(--purple);
+  margin: 8px 0 16px;
+  background: rgba(28,2,82,0.03);
+}
+
+/* Environmental pressure chain */
+.pressure-chain {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0;
+  flex-wrap: wrap;
+}
+
+.chain-step {
+  background: rgba(28,2,82,0.06);
+  border: 1px solid rgba(28,2,82,0.15);
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--purple);
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.chain-step-conflict {
+  background: var(--purple);
+  color: #fff;
+  border-color: var(--purple);
+}
+
+.chain-arrow {
+  font-size: 20px;
+  color: var(--purple);
+  opacity: 0.35;
+  flex-shrink: 0;
+}
+
+/* Factors tag list */
+.tks-un-factors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.tks-un-factors li {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--purple);
+  background: rgba(28,2,82,0.06);
+  border: 1px solid rgba(28,2,82,0.13);
+  padding: 7px 14px;
+  border-radius: 20px;
+}
+
+/* Two-column data/output grid */
+.tks-un-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0 20px;
+}
+
+.tks-un-col {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.tks-un-col-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  opacity: 0.45;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(28,2,82,0.1);
+  display: block;
+}
+
+.tks-un-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tks-un-col ul li {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(28,2,82,0.75);
+  padding-left: 16px;
+  position: relative;
+}
+
+.tks-un-col ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  opacity: 0.35;
+  font-size: 11px;
+}
+
+/* Signal test blocks */
+.tks-un-signal-block {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 28px;
+  margin: 24px 0;
+}
+
+.tks-un-signal-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  opacity: 0.45;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.tks-un-stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.tks-un-stat {
+  background: var(--purple);
+  border-radius: 6px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tks-un-stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  display: block;
+}
+
+.tks-un-stat-desc {
+  font-size: 11px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.65);
+}
+
+/* General bullet list */
+.tks-un-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.tks-un-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(28,2,82,0.75);
+  padding-left: 20px;
+  position: relative;
+}
+
+.tks-un-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  opacity: 0.45;
+  font-size: 12px;
+  top: 2px;
+}
+
+/* Tier model */
+.tks-un-tier-model {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.tks-un-tier {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  border-radius: 6px;
+}
+
+.tier-2 {
+  background: rgba(28,2,82,0.05);
+  border: 1px solid rgba(28,2,82,0.12);
+}
+
+.tier-1 {
+  background: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.tier-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  flex-shrink: 0;
+  min-width: 52px;
+}
+
+.tier-2 .tier-label { color: var(--purple); opacity: 0.55; }
+.tier-1 .tier-label { color: rgba(255,255,255,0.65); }
+
+.tier-desc {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tier-2 .tier-desc { color: var(--purple); }
+.tier-1 .tier-desc { color: #fff; }
+
+/* Role list */
+.tks-un-role-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.tks-un-role-list li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(28,2,82,0.75);
+  padding-left: 20px;
+  position: relative;
+}
+
+.tks-un-role-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  opacity: 0.45;
+  font-size: 12px;
+  top: 3px;
+}
+
+/* PDF viewer */
+.tks-un-pdf-wrap {
+  width: 100%;
+  background: #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(28,2,82,0.1);
+  margin-bottom: 16px;
+}
+
+.tks-un-pdf {
+  width: 100%;
+  height: 740px;
+  border: none;
+  display: block;
+}
+
+.tks-un-pdf-link {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+  padding-bottom: 1px;
+  display: inline-block;
+  transition: opacity 0.15s;
+}
+
+.tks-un-pdf-link:hover { opacity: 0.65; }
+
+@media (max-width: 768px) {
+  .tks-un-two-col { grid-template-columns: 1fr; }
+  .tks-un-stat-row { grid-template-columns: 1fr; }
+  .pressure-chain { flex-direction: column; align-items: flex-start; }
+  .chain-arrow { transform: rotate(90deg); }
+}
