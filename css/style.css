@@ -164,7 +164,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .handwritten-note {
   font-family: var(--font-hand);
   font-size: 17px;
-  color: var(--cream);
+  color: var(--purple);
   opacity: 0.85;
   line-height: 1.4;
   position: absolute;
@@ -173,7 +173,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   transform: rotate(-3deg);
   z-index: 3;
   pointer-events: none;
-  text-shadow: 0 1px 6px rgba(28,2,82,0.4);
+  text-shadow: none;
 }
 
 .hero-intro {
