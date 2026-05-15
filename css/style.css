@@ -397,7 +397,6 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .project-card {
   background: var(--white);
-  border: 1px solid var(--gray-light);
   padding: 20px;
   width: 280px;
   flex-shrink: 0;
