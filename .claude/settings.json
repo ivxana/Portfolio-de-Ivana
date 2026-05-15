@@ -1,10 +1,53 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Esther\\\\Downloads\" -File | Where-Object { $_.Extension -match \"\\\\.\\(jpg|jpeg|png|webp|gif\\)$\" } | Sort-Object LastWriteTime -Descending | ForEach-Object { \"$\\($_.LastWriteTime.ToString\\('yyyy-MM-dd HH:mm'\\)\\) | $\\($_.Name\\)\" })"
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Esther\\\\Downloads\" -File | Where-Object { $_.Extension -match \"\\\\.\\(jpg|jpeg|png|webp|gif\\)$\" } | Sort-Object LastWriteTime -Descending | ForEach-Object { \"$\\($_.LastWriteTime.ToString\\('yyyy-MM-dd HH:mm'\\)\\) | $\\($_.Name\\)\" })",
+      "Bash(git mv *)",
+      "Bash(git commit -m ' *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Esther\\\\Downloads\" -File | Where-Object { $_.Extension -match \"\\\\.\\(jpg|jpeg|png|webp\\)$\" } | Sort-Object LastWriteTime -Descending | Select-Object -First 5 | ForEach-Object { \"$\\($_.LastWriteTime.ToString\\('yyyy-MM-dd HH:mm'\\)\\) | $\\($_.Name\\)\" })",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Esther\\\\Downloads\\\\ChatGPT Image May 13, 2026, 07_35_30 AM \\(1\\).png\" \"C:\\\\Users\\\\Esther\\\\Downloads\\\\ivana-portfolio\\\\ivana-portfolio\\\\assets\\\\signature.png\" -Force)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Esther\\\\Downloads\" -File | Where-Object { $_.Extension -match \"\\\\.\\(jpg|jpeg|png|webp\\)$\" } | Sort-Object LastWriteTime -Descending | Select-Object -First 3 | ForEach-Object { \"$\\($_.LastWriteTime.ToString\\('yyyy-MM-dd HH:mm'\\)\\) | $\\($_.Name\\)\" })",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Esther\\\\Downloads\\\\ChatGPT Image May 13, 2026, 07_36_03 AM \\(1\\).png\" \"C:\\\\Users\\\\Esther\\\\Downloads\\\\ivana-portfolio\\\\ivana-portfolio\\\\assets\\\\initial.png\" -Force)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Esther\\\\Downloads\\\\ivana-portfolio\\\\ivana-portfolio\\\\assets\\\\\" | ForEach-Object { $_.Name })",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\Esther\\\\Downloads\\\\ivana-portfolio\\\\ivana-portfolio\\\\assets\")",
+      "Bash(Select-Object Name)",
+      "WebFetch(domain:substack.com)",
+      "WebFetch(domain:borderless.so)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:ivanaokpakovwodo.substack.com)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://ivanaokpakovwodo.substack.com/p/everything-everywhere-all-at-once\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://medium.com/@ivyokp/how-i-used-ai-to-make-canadian-democracy-accessible-34554e1cf586\")",
+      "Bash(curl -s -L -o c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-substack-1.jpg 'https://substackcdn.com/image/fetch/$s_!ZGje!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F69c31e0d-4e73-45db-9208-5461f05e50ec_1080x1920.jpeg')",
+      "Bash(curl -s -L -o \"c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-medium-1.jpg\" \"https://miro.medium.com/v2/resize:fit:736/1*K9qGaCDvHd4Ax9jefE0PvA@2x.jpeg\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/virality-vs-veracity-how-nlp-models-detect-false-narratives-at-scale-34cc265d0851\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/what-building-a-fake-news-detector-taught-me-about-truth-0c0086778144\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/how-500-words-taught-gpt-4-what-counts-as-manipulation-cf9c8982ce1b\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://ivanaokpakovwodo.substack.com/p/two-lives-one-year\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://ivanaokpakovwodo.substack.com/p/beyond-my-comfort-zone\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://ivanaokpakovwodo.substack.com/p/leveling-up\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://ivanaokpakovwodo.substack.com/p/chapter-one-new-city-new-me\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://medium.com/@ivyokp/virality-vs-veracity-how-nlp-models-detect-false-narratives-at-scale-34cc265d0851\")",
+      "Bash(grep -oP 'miro\\\\.medium\\\\.com/[^\"\\\\\\\\]+')",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://medium.com/@ivyokp/what-building-a-fake-news-detector-taught-me-about-truth-0c0086778144\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://medium.com/@ivyokp/how-500-words-taught-gpt-4-what-counts-as-manipulation-cf9c8982ce1b\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36\" \"https://medium.com/@ivyokp/virality-vs-veracity-how-nlp-models-detect-false-narratives-at-scale-34cc265d0851\")",
+      "Bash(grep -o 'miro\\\\.medium\\\\.com[^\"\\\\\\\\]*')",
+      "Bash(curl -s -L -o c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-substack-2.jpg 'https://substackcdn.com/image/fetch/$s_!wVRs!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3c339839-d3fb-4607-81a3-d3420d9c4ba9_735x490.jpeg')",
+      "Bash(curl -s -L -o c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-substack-3.jpg 'https://substackcdn.com/image/fetch/$s_!eXFT!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd78c238f-f34e-40bb-83e0-141863ad02cb_1600x1200.jpeg')",
+      "Bash(curl -s -L -o c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-substack-4.jpg 'https://substackcdn.com/image/fetch/$s_!Huh3!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd19bed64-1794-40c3-83a7-289746f12cf6_1200x800.jpeg')",
+      "Bash(curl -s -L -o c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-substack-5.jpg 'https://substackcdn.com/image/fetch/$s_!b5Nt!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd4a0ffc9-951f-46de-9cc1-4c693340ae8b_5699x3799.jpeg')",
+      "Bash(curl -s -L -o \"c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-medium-2.jpg\" \"https://miro.medium.com/v2/resize:fit:1024/1*hg1OS8fB1eku-4WnuIqptg@2x.jpeg\")",
+      "Bash(curl -s -L -o \"c:/Users/Esther/Downloads/ivana-portfolio/ivana-portfolio/assets/article-medium-3.jpg\" \"https://miro.medium.com/v2/resize:fit:1200/1*BGv57jwNjvDUzDb8_XNDrQ@2x.jpeg\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/how-500-words-taught-gpt-4-what-counts-as-manipulation-cf9c8982ce1b\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/what-building-a-fake-news-detector-taught-me-about-truth-0c0086778144\")",
+      "Bash(curl -s -L -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/virality-vs-veracity-how-nlp-models-detect-false-narratives-at-scale-34cc265d0851\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://borderless.so/stories/from-toronto-to-atlanta-why-i-chose-georgia-tech-over-canadian-universities\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36\" \"https://borderless.so/stories/from-toronto-to-atlanta-why-i-chose-georgia-tech-over-canadian-universities\")",
+      "Bash(git commit *)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\Esther\\Downloads"
+      "C:\\Users\\Esther\\Downloads",
+      "C:\\Users\\Esther\\Downloads\\ivana-portfolio\\ivana-portfolio\\assets"
     ]
   }
 }

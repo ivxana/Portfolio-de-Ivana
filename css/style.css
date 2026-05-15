@@ -1244,19 +1244,14 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 /* ============================================================
-   LANGUAGES SECTION
+   LANGUAGES — integrated into about section
    ============================================================ */
-.languages-section {
-  background: var(--purple);
-  padding: 48px 40px 48px 48px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+.about-languages {
+  padding: 48px 40px;
+  border-bottom: 1px solid var(--gray-light);
 }
 
-.languages-inner { max-width: 640px; }
-
-.languages-section .section-label {
-  color: rgba(255,255,255,0.6);
-  border-bottom-color: rgba(255,255,255,0.2);
+.about-languages .section-label {
   margin-bottom: 28px;
 }
 
@@ -1264,6 +1259,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 580px;
 }
 
 .lang-item {
@@ -1277,25 +1273,25 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   font-family: var(--font-display);
   font-size: 16px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--purple);
 }
 
 .lang-bar {
   height: 3px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(28,2,82,0.1);
   border-radius: 2px;
   overflow: hidden;
 }
 
 .lang-fill {
   height: 100%;
-  background: var(--white);
+  background: var(--purple);
   border-radius: 2px;
 }
 
 .lang-level {
   font-size: 11px;
-  color: rgba(255,255,255,0.6);
+  color: rgba(28,2,82,0.5);
   letter-spacing: 0.08em;
   text-align: right;
 }
@@ -1446,6 +1442,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .topbar { padding: 16px 20px; }
   .hero-left { padding: 40px 20px; }
   .tools-section { grid-template-columns: 1fr; }
+  .about-languages { padding: 36px 24px; }
   .lang-item { grid-template-columns: 80px 1fr; }
   .lang-level { display: none; }
 }
