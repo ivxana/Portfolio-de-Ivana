@@ -162,13 +162,14 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .handwritten-note {
   font-family: var(--font-hand);
-  font-size: 18px;
+  font-size: 17px;
   color: var(--purple);
+  opacity: 0.55;
   line-height: 1.4;
-  position: absolute;
-  top: 56px;
-  right: 28px;
+  display: inline-block;
   transform: rotate(-2deg);
+  margin-bottom: 20px;
+  align-self: flex-start;
 }
 
 .hero-intro {
@@ -421,7 +422,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .project-img {
   width: 100%;
-  height: 160px;
+  height: 190px;
   background: var(--gray-light);
   overflow: hidden;
   display: flex;
@@ -438,8 +439,10 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .project-img-cover img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 16px;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  display: block;
 }
 
 .protest {
