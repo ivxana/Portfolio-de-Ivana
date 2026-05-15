@@ -1,0 +1,163 @@
+/* ============================================================
+   WRITING PAGE
+   ============================================================ */
+
+.writing-page-hero {
+  padding: 72px 60px 60px;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+  max-width: 720px;
+}
+.writing-page-hero .section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+.writing-page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 900;
+  color: var(--purple);
+  line-height: 1.05;
+  margin: 0 0 20px;
+}
+.writing-page-intro {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(28,2,82,0.65);
+  margin: 0;
+  max-width: 560px;
+}
+
+/* Platform sections */
+.writing-platform-section {
+  padding: 56px 60px;
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.writing-platform-section:nth-child(odd) {
+  background: #fff;
+}
+.writing-platform-section:nth-child(even) {
+  background: var(--cream);
+}
+.platform-header {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.platform-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+}
+.platform-badge-substack {
+  background: #ff6719;
+  color: #fff;
+}
+.platform-badge-medium {
+  background: #000;
+  color: #fff;
+}
+.platform-badge-borderless {
+  background: #1a2744;
+  color: #fff;
+}
+.platform-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0 0 8px;
+}
+.platform-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(28,2,82,0.6);
+  margin: 0 0 16px;
+  max-width: 480px;
+}
+.platform-follow-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.platform-follow-link:hover { opacity: 1; }
+
+/* Article rows */
+.platform-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(28,2,82,0.1);
+}
+.platform-article-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(28,2,82,0.07);
+  text-decoration: none;
+  color: var(--purple);
+  transition: padding-left 0.2s;
+}
+.platform-article-row:hover {
+  padding-left: 6px;
+}
+.platform-article-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.platform-article-date {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+.platform-article-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+.platform-article-arrow {
+  font-size: 18px;
+  color: var(--purple);
+  opacity: 0.3;
+  flex-shrink: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.platform-article-row:hover .platform-article-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Topbar link wrapper */
+.writing-page-hero + * .topbar a:first-child {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .writing-page-hero { padding: 48px 24px 40px; }
+  .writing-platform-section { padding: 40px 24px; }
+  .platform-header { grid-template-columns: 1fr; gap: 20px; }
+}

@@ -635,6 +635,103 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 /* ============================================================
+   NOTES & REFLECTIONS — ARTICLES GRID
+   ============================================================ */
+.notes-articles-section {
+  padding: 72px 60px 80px;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.notes-articles-header {
+  margin-bottom: 48px;
+}
+.notes-articles-header .section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.notes-articles-header .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--purple);
+  margin: 0;
+}
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--purple);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(28,2,82,0.10);
+}
+.article-source-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.source-substack {
+  background: #ff6719;
+  color: #fff;
+}
+.source-borderless {
+  background: #1a2744;
+  color: #fff;
+}
+.source-medium {
+  background: #000;
+  color: #fff;
+}
+.article-date {
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  opacity: 0.75;
+  text-transform: none;
+  font-size: 10px;
+}
+.article-card-body {
+  padding: 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 16px;
+}
+.article-card-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--purple);
+}
+.article-read-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple);
+  opacity: 0.5;
+}
+
+/* ============================================================
    QUOTE + NOTES
    ============================================================ */
 .quote-notes-section {
@@ -1309,6 +1406,8 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .hero { grid-template-columns: 1fr; }
   .hero-photo { height: 400px; }
   .writing-grid { grid-template-columns: 1fr; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .notes-articles-section { padding: 48px 24px; }
   .quote-notes-section { grid-template-columns: 1fr; }
   .notes-grid { grid-template-columns: 1fr; }
   .beliefs-section { grid-template-columns: 1fr; }
