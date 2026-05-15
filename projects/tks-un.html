@@ -235,14 +235,56 @@
         <div class="tks-un-section">
           <p class="tks-un-label">Slide Deck</p>
           <h2 class="tks-un-heading">Project Presentation</h2>
-          <div class="tks-un-pdf-wrap">
-            <iframe
-              src="../assets/tks-un-deck.pdf"
-              class="tks-un-pdf"
-              title="TKS × UN Slide Deck">
-            </iframe>
+
+          <div class="deck-viewer" id="deck-viewer">
+
+            <div class="deck-topbar">
+              <span class="deck-viewer-title">TKS &#x00D7; UN &mdash; Project Deck</span>
+              <div class="deck-actions">
+                <button class="deck-action-btn" id="deck-fullscreen" title="Fullscreen">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                </button>
+                <a class="deck-action-btn" href="../assets/tks-un-deck.pdf" download title="Download PDF">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="deck-stage">
+              <div class="deck-canvas-wrap" id="deck-canvas-wrap">
+                <canvas id="deck-canvas"></canvas>
+                <p class="deck-status" id="deck-status">Loading deck&hellip;</p>
+              </div>
+            </div>
+
+            <div class="deck-nav-bar">
+              <button class="deck-nav-btn" id="deck-prev" disabled aria-label="Previous slide">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <span class="deck-page-info">
+                <span id="deck-current">&mdash;</span>
+                <span class="deck-sep">/</span>
+                <span id="deck-total">&mdash;</span>
+              </span>
+              <button class="deck-nav-btn" id="deck-next" disabled aria-label="Next slide">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+
           </div>
-          <a href="../assets/tks-un-deck.pdf" target="_blank" class="tks-un-pdf-link">DOWNLOAD DECK ↗</a>
         </div>
 
       </div>
@@ -265,5 +307,83 @@
     </footer>
 
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+  (function () {
+    const PDF_URL = '../assets/tks-un-deck.pdf';
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    let pdfDoc = null;
+    let currentPage = 1;
+    let rendering = false;
+
+    const canvas    = document.getElementById('deck-canvas');
+    const ctx       = canvas.getContext('2d');
+    const statusEl  = document.getElementById('deck-status');
+    const currentEl = document.getElementById('deck-current');
+    const totalEl   = document.getElementById('deck-total');
+    const prevBtn   = document.getElementById('deck-prev');
+    const nextBtn   = document.getElementById('deck-next');
+
+    function renderPage(num) {
+      if (rendering || !pdfDoc) return;
+      rendering = true;
+      pdfDoc.getPage(num).then(function (page) {
+        const maxW = canvas.parentElement.clientWidth;
+        const vp0  = page.getViewport({ scale: 1 });
+        const scale = Math.min(maxW / vp0.width, 2);
+        const vp    = page.getViewport({ scale });
+        canvas.width  = vp.width;
+        canvas.height = vp.height;
+        page.render({ canvasContext: ctx, viewport: vp }).promise.then(function () {
+          rendering = false;
+          currentEl.textContent = num;
+          prevBtn.disabled = num <= 1;
+          nextBtn.disabled = num >= pdfDoc.numPages;
+        });
+      });
+    }
+
+    pdfjsLib.getDocument(PDF_URL).promise.then(function (pdf) {
+      pdfDoc = pdf;
+      totalEl.textContent = pdf.numPages;
+      statusEl.style.display = 'none';
+      prevBtn.disabled = false;
+      nextBtn.disabled = false;
+      renderPage(1);
+    }).catch(function () {
+      statusEl.textContent = 'Deck uploading soon.';
+    });
+
+    function goNext() {
+      if (pdfDoc && currentPage < pdfDoc.numPages && !rendering) renderPage(++currentPage);
+    }
+    function goPrev() {
+      if (pdfDoc && currentPage > 1 && !rendering) renderPage(--currentPage);
+    }
+
+    nextBtn.addEventListener('click', goNext);
+    prevBtn.addEventListener('click', goPrev);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goNext();
+      if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   goPrev();
+    });
+
+    document.getElementById('deck-fullscreen').addEventListener('click', function () {
+      const v = document.getElementById('deck-viewer');
+      if (v.requestFullscreen) v.requestFullscreen();
+      else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { if (pdfDoc) renderPage(currentPage); }, 250);
+    });
+  })();
+  </script>
 </body>
 </html>
