@@ -135,6 +135,7 @@
 .fl-screenshot-link {
   display: block;
   margin-top: 28px;
+  max-width: 520px;
 }
 
 .fl-screenshot {
