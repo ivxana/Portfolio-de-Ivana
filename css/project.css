@@ -43,7 +43,7 @@
 
 .tks-project-thumb--contain img {
   object-fit: contain !important;
-  padding: 20px 28px;
+  padding: 6px 10px;
 }
 
 .tks-project-thumb--white {
