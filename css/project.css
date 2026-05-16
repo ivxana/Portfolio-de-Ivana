@@ -44,6 +44,10 @@
 .tks-project-thumb--contain img {
   object-fit: contain !important;
 }
+
+.tks-project-thumb--white {
+  background: #fff;
+}
 .tks-project-inner {
   padding: 20px 24px 28px;
   display: flex;
