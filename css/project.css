@@ -38,11 +38,12 @@
 
 .tks-project-thumb--contain {
   background: #fff;
-  padding: 6px;
+  padding: 0;
 }
 
 .tks-project-thumb--contain img {
   object-fit: contain !important;
+  padding: 12px 20px;
 }
 
 .tks-project-thumb--white {
