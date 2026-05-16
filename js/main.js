@@ -8,30 +8,34 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 
 if (track && prevBtn && nextBtn) {
+  const wrap = track.parentElement;
+
   const cardWidth = () => {
     const card = track.querySelector('.project-card');
     if (!card) return 304;
-    return card.offsetWidth + 24; // width + gap
+    return card.offsetWidth + 24;
   };
 
-  let currentIndex = 0;
-  const totalCards = track.querySelectorAll('.project-card').length;
+  nextBtn.addEventListener('click', () => { wrap.scrollLeft += cardWidth(); });
+  prevBtn.addEventListener('click', () => { wrap.scrollLeft -= cardWidth(); });
 
-  function getVisibleCount() {
-    const wrapWidth = track.parentElement.offsetWidth;
-    return Math.floor(wrapWidth / cardWidth());
-  }
-
-  function updateCarousel() {
-    const maxIndex = totalCards - getVisibleCount();
-    currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
-    track.style.transform = `translateX(-${currentIndex * cardWidth()}px)`;
-  }
-
-  nextBtn.addEventListener('click', () => { currentIndex++; updateCarousel(); });
-  prevBtn.addEventListener('click', () => { currentIndex--; updateCarousel(); });
-
-  window.addEventListener('resize', updateCarousel);
+  // Drag to scroll
+  let isDragging = false, startX = 0, startScroll = 0;
+  wrap.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.pageX;
+    startScroll = wrap.scrollLeft;
+    wrap.classList.add('dragging');
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    wrap.scrollLeft = startScroll - (e.pageX - startX);
+  });
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    wrap.classList.remove('dragging');
+  });
+  wrap.addEventListener('click', e => { if (Math.abs(wrap.scrollLeft - startScroll) > 5) e.preventDefault(); }, true);
 }
 
 // ---- BELIEFS EXPAND ----
