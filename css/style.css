@@ -1437,22 +1437,85 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 @media (max-width: 768px) {
+  /* ---- Layout ---- */
   :root { --sidenav-w: 0px; }
   .sidenav { display: none; }
+  .main-content { margin-left: 0; }
+
+  /* ---- Topbar ---- */
+  .topbar { padding: 14px 20px; }
+  .logo-sig { height: 44px; }
+
+  /* ---- Hero ---- */
   .hero { grid-template-columns: 1fr; }
-  .hero-photo { height: 400px; }
-  .writing-grid { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-photo { height: 320px; }
+  .hero-left { padding: 32px 20px 28px; }
+  .hero-title { font-size: clamp(42px, 12vw, 64px); }
+  .hero-intro { max-width: 100%; font-size: 14px; }
+  .handwritten-note { font-size: 14px; }
+
+  /* ---- Work section ---- */
+  .work-section { padding: 40px 0 40px 20px; }
+  .work-header { padding-right: 20px; margin-bottom: 24px; gap: 16px; }
+
+  /* ---- Writing section → horizontal carousel ---- */
+  .writing-section { padding: 48px 0 48px 20px; overflow: hidden; }
+  .writing-section .section-header-row { padding-right: 20px; margin-bottom: 28px; }
+  .writing-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-right: 20px;
+    scrollbar-width: none;
+  }
+  .writing-grid::-webkit-scrollbar { display: none; }
+  .writing-card {
+    min-width: 260px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  .writing-cover { height: 170px; }
+
+  /* ---- Notes / articles ---- */
+  .notes-articles-section { padding: 40px 20px 48px; }
   .articles-grid { grid-template-columns: 1fr; }
-  .notes-articles-section { padding: 48px 24px; }
+
+  /* ---- Quote + notes ---- */
   .quote-notes-section { grid-template-columns: 1fr; }
-  .notes-grid { grid-template-columns: 1fr; }
+  .quote-block { padding: 40px 24px; }
+  .notes-block { padding: 36px 20px; }
+  .notes-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  /* ---- Beliefs ---- */
   .beliefs-section { grid-template-columns: 1fr; }
-  .footer { grid-template-columns: 1fr; }
-  .topbar { padding: 16px 20px; }
-  .hero-left { padding: 40px 20px; }
-  .tools-section { grid-template-columns: 1fr; }
+  .beliefs-col, .identity-col, .sticky-col, .currently-col { padding: 32px 20px; }
+  .sticky-col { border-top: 1px solid var(--gray-light); border-right: none; }
+  .currently-col { border-top: 1px solid var(--gray-light); }
+
+  /* ---- Tools ---- */
+  .tools-section { grid-template-columns: 1fr; padding: 40px 20px; gap: 28px; }
+
+  /* ---- Footer ---- */
+  .footer { grid-template-columns: 1fr; padding: 40px 20px; gap: 24px; }
+  .footer-badge { display: none; }
+
+  /* ---- About page ---- */
+  .about-page-header { padding: 40px 20px 32px; }
   .about-page-body { grid-template-columns: 1fr; }
-  .about-bio { border-right: none; border-bottom: 1px solid var(--gray-light); }
-  .about-languages { padding: 36px 24px; }
+  .about-bio { border-right: none; border-bottom: 1px solid var(--gray-light); padding: 36px 20px; }
+  .about-facts { padding: 36px 20px; }
+  .about-page-quote { flex-direction: column; align-items: flex-start; padding: 40px 20px; gap: 24px; }
+  .about-languages { padding: 32px 20px; }
   .lang-level { display: none; }
+
+  /* ---- Leadership / Experience ---- */
+  .leadership-section { padding: 40px 0 40px 20px; }
+  .leadership-header { padding-right: 20px; margin-bottom: 28px; }
+  .exp-list { padding-right: 20px; }
+  .exp-item { grid-template-columns: 1fr; gap: 4px; padding: 24px 0; }
+  .exp-date { padding-top: 0; }
 }

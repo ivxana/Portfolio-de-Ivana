@@ -249,6 +249,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 420px;
+  overflow: hidden;
 }
 
 .rc-deck-canvas-wrap {
@@ -306,7 +308,7 @@
 }
 
 .rc-deck-viewer:fullscreen .rc-deck-stage,
-.rc-deck-viewer:-webkit-full-screen .rc-deck-stage { flex: 1; min-height: 0; }
+.rc-deck-viewer:-webkit-full-screen .rc-deck-stage { flex: 1; min-height: 0; max-height: none; }
 .rc-deck-viewer:fullscreen #rc-deck-canvas,
 .rc-deck-viewer:-webkit-full-screen #rc-deck-canvas { max-height: calc(100vh - 110px); width: auto; }
 
@@ -315,4 +317,5 @@
   .rc-workflow { flex-direction: column; }
   .rc-step-arrow { transform: rotate(90deg); margin: 0 auto; }
   .rc-focus-grid { grid-template-columns: 1fr; }
+  .rc-deck-stage { max-height: 300px; }
 }
