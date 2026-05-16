@@ -147,6 +147,22 @@
   top: 3px;
 }
 
+/* Article link */
+.us-article-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--purple);
+  border-bottom: 1px solid rgba(28,2,82,0.3);
+  text-decoration: none;
+  transition: opacity 0.15s;
+  margin-top: 4px;
+}
+.us-article-link:hover { opacity: 0.65; }
+
 @media (max-width: 768px) {
   .us-two-col { grid-template-columns: 1fr; }
   .us-signal-grid { gap: 8px; }
