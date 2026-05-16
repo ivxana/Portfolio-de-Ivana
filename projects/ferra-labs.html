@@ -142,8 +142,98 @@
           </div>
         </div>
 
+        <div class="project-page-divider"></div>
+
+        <!-- Slide Deck -->
+        <div class="fl-section">
+          <p class="fl-label">Presentation Deck</p>
+          <div class="fl-deck-header">
+            <h2 class="fl-heading" style="margin-bottom:0;">Ferra Labs &mdash; Full Pitch Deck</h2>
+            <div class="fl-award-badge">
+              <span class="fl-award-icon">&#x2605;</span>
+              Best Deck &amp; Innovation Award
+            </div>
+          </div>
+          <p class="fl-text" style="margin-top:16px;">This deck and its accompanying presentation were recognized as the best of the cohort, earning the Best Deck and Innovation Award.</p>
+
+          <div class="fl-deck-viewer" id="fl-deck-viewer">
+            <div class="fl-deck-topbar">
+              <span class="fl-deck-viewer-title">Ferra Labs V3 &mdash; Pitch Deck</span>
+              <div class="fl-deck-actions">
+                <a href="../assets/Ferra-Labs-V3.pdf" download class="fl-deck-action-btn" title="Download">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <button class="fl-deck-action-btn" id="fl-fullscreen-btn" title="Fullscreen">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 5V1h4M9 1h4v4M13 9v4H9M5 13H1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="fl-deck-stage">
+              <div class="fl-deck-canvas-wrap">
+                <canvas id="fl-deck-canvas"></canvas>
+                <div class="fl-deck-status" id="fl-deck-status">Loading&hellip;</div>
+              </div>
+            </div>
+            <div class="fl-deck-nav-bar">
+              <button class="fl-deck-nav-btn" id="fl-prev-btn" disabled>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 11L5 7l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span class="fl-deck-page-info" id="fl-page-info">— / —</span>
+              <button class="fl-deck-nav-btn" id="fl-next-btn" disabled>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      (function () {
+        var pdfDoc = null, pageNum = 1, rendering = false, canvas = document.getElementById('fl-deck-canvas'), ctx = canvas.getContext('2d');
+        var status = document.getElementById('fl-deck-status'), pageInfo = document.getElementById('fl-page-info');
+        var prevBtn = document.getElementById('fl-prev-btn'), nextBtn = document.getElementById('fl-next-btn');
+        function renderPage(n) {
+          rendering = true;
+          pdfDoc.getPage(n).then(function (page) {
+            var vp = page.getViewport({ scale: 1 });
+            var wrap = canvas.parentElement;
+            var scale = wrap.clientWidth / vp.width;
+            var scaled = page.getViewport({ scale: scale });
+            canvas.width = scaled.width;
+            canvas.height = scaled.height;
+            status.style.display = 'none';
+            page.render({ canvasContext: ctx, viewport: scaled }).promise.then(function () {
+              rendering = false;
+              pageInfo.textContent = n + ' / ' + pdfDoc.numPages;
+              prevBtn.disabled = n <= 1;
+              nextBtn.disabled = n >= pdfDoc.numPages;
+            });
+          });
+        }
+        pdfjsLib.getDocument('../assets/Ferra-Labs-V3.pdf').promise.then(function (doc) {
+          pdfDoc = doc;
+          renderPage(pageNum);
+        });
+        prevBtn.addEventListener('click', function () { if (pageNum > 1 && !rendering) { pageNum--; renderPage(pageNum); } });
+        nextBtn.addEventListener('click', function () { if (pdfDoc && pageNum < pdfDoc.numPages && !rendering) { pageNum++; renderPage(pageNum); } });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextBtn.click();
+          if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevBtn.click();
+        });
+        document.getElementById('fl-fullscreen-btn').addEventListener('click', function () {
+          var viewer = document.getElementById('fl-deck-viewer');
+          if (document.fullscreenElement) document.exitFullscreen();
+          else viewer.requestFullscreen();
+        });
+        document.addEventListener('fullscreenchange', function () {
+          if (document.fullscreenElement && pdfDoc) renderPage(pageNum);
+        });
+      })();
+    </script>
 
     <footer class="footer" id="contact">
       <div class="footer-left">

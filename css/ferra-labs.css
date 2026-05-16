@@ -149,7 +149,151 @@
 
 .fl-screenshot-link:hover .fl-screenshot { opacity: 1; }
 
+/* Award badge + deck header */
+.fl-deck-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.fl-award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: rgba(28,2,82,0.07);
+  border: 1px solid rgba(28,2,82,0.15);
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.fl-award-icon {
+  font-size: 9px;
+  opacity: 0.6;
+}
+
+/* Deck viewer */
+.fl-deck-viewer {
+  overflow: hidden;
+  background: #0d0818;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.fl-deck-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 18px;
+  background: var(--purple);
+}
+
+.fl-deck-viewer-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+}
+
+.fl-deck-actions {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.fl-deck-action-btn {
+  width: 29px;
+  height: 29px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.fl-deck-action-btn:hover { background: rgba(255,255,255,0.22); }
+
+.fl-deck-stage {
+  padding: 0;
+  background: #0d0818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fl-deck-canvas-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#fl-deck-canvas {
+  max-width: 100%;
+  display: block;
+}
+
+.fl-deck-status {
+  color: rgba(255,255,255,0.3);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  position: absolute;
+}
+
+.fl-deck-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 13px 20px;
+  background: rgba(0,0,0,0.35);
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.fl-deck-nav-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.15s, color 0.15s;
+}
+.fl-deck-nav-btn:hover:not(:disabled) { background: rgba(255,255,255,0.15); color: #fff; }
+.fl-deck-nav-btn:disabled { opacity: 0.25; cursor: default; }
+
+.fl-deck-page-info {
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+  min-width: 56px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.fl-deck-viewer:fullscreen .fl-deck-stage,
+.fl-deck-viewer:-webkit-full-screen .fl-deck-stage { flex: 1; min-height: 0; }
+.fl-deck-viewer:fullscreen #fl-deck-canvas,
+.fl-deck-viewer:-webkit-full-screen #fl-deck-canvas { max-height: calc(100vh - 110px); width: auto; }
+
 @media (max-width: 768px) {
   .fl-two-col { grid-template-columns: 1fr; }
   .fl-focus-grid { grid-template-columns: 1fr; }
+  .fl-deck-header { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
