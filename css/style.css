@@ -1147,6 +1147,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .about-page-body {
   border-bottom: 1px solid var(--gray-light);
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  align-items: start;
 }
 
 .about-bio {
@@ -1154,7 +1157,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 780px;
+  border-right: 1px solid var(--gray-light);
 }
 
 .about-bio-lead {
@@ -1247,26 +1250,25 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
    LANGUAGES — integrated into about section
    ============================================================ */
 .about-languages {
-  padding: 48px 40px;
-  border-bottom: 1px solid var(--gray-light);
+  padding: 48px 32px;
 }
 
 .about-languages .section-label {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .lang-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 580px;
 }
 
 .lang-item {
   display: grid;
-  grid-template-columns: 100px 1fr 220px;
+  grid-template-columns: 80px 1fr;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
+  row-gap: 6px;
 }
 
 .lang-name {
@@ -1290,10 +1292,10 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 .lang-level {
-  font-size: 11px;
-  color: rgba(28,2,82,0.5);
-  letter-spacing: 0.08em;
-  text-align: right;
+  font-size: 10px;
+  color: rgba(28,2,82,0.45);
+  letter-spacing: 0.06em;
+  grid-column: 2;
 }
 
 /* ============================================================
@@ -1442,7 +1444,8 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .topbar { padding: 16px 20px; }
   .hero-left { padding: 40px 20px; }
   .tools-section { grid-template-columns: 1fr; }
+  .about-page-body { grid-template-columns: 1fr; }
+  .about-bio { border-right: none; border-bottom: 1px solid var(--gray-light); }
   .about-languages { padding: 36px 24px; }
-  .lang-item { grid-template-columns: 80px 1fr; }
   .lang-level { display: none; }
 }

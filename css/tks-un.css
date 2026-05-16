@@ -296,16 +296,6 @@
 /* ============================================================
    DECK VIEWER
    ============================================================ */
-.tks-un-page-hero {
-  height: 520px;
-  background: var(--cream);
-}
-.tks-un-page-cover {
-  object-fit: contain;
-  object-position: center;
-  padding: 24px;
-}
-
 .deck-viewer {
   overflow: hidden;
   background: #0d0818;
