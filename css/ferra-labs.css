@@ -133,12 +133,14 @@
 
 /* Platform screenshot */
 .fl-page-content {
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 460px;
 }
 
 .fl-screenshot-link {
   display: block;
   margin-top: 8px;
+  transform: translateX(24px);
+  width: calc(100% + 24px);
 }
 
 .fl-screenshot {
