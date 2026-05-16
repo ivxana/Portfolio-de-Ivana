@@ -142,8 +142,15 @@
 }
 
 @media (max-width: 768px) {
-  .platform-page-hero { padding: 48px 24px 36px; }
-  .platform-page-articles { padding: 0 24px 48px; }
+  .platform-page-hero { padding: 36px 20px 28px; }
+  .platform-page-cover { max-height: 240px; }
+  .platform-page-cover img { max-height: 240px; }
+  .platform-page-articles { padding: 0 20px 48px; }
+  .platform-article-title { font-size: 15px; }
+  .platform-article-thumb,
+  .platform-article-thumb-blank { width: 56px; height: 40px; }
+  .platform-article-row { gap: 14px; }
+  .platform-article-arrow { font-size: 16px; }
 }
 
 /* ============================================================
@@ -305,7 +312,13 @@
 }
 
 @media (max-width: 768px) {
-  .writing-page-hero { padding: 48px 24px 40px; }
-  .writing-platform-section { padding: 40px 24px; }
-  .platform-header { grid-template-columns: 1fr; gap: 20px; }
+  .writing-page-hero { padding: 36px 20px 32px; }
+  .writing-page-title { font-size: clamp(32px, 9vw, 48px); }
+  .writing-page-intro { font-size: 14px; }
+  .writing-platform-section { padding: 36px 20px; }
+  .platform-header { grid-template-columns: 1fr; gap: 16px; }
+  .platform-title { font-size: 20px; }
+  .platform-article-title { font-size: 15px; }
+  .platform-article-row { gap: 14px; padding: 14px 0; }
+  .platform-article-arrow { font-size: 16px; }
 }

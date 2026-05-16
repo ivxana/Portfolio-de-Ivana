@@ -1468,17 +1468,19 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    gap: 16px;
+    gap: 14px;
     padding-right: 20px;
     scrollbar-width: none;
   }
   .writing-grid::-webkit-scrollbar { display: none; }
   .writing-card {
-    min-width: 260px;
+    min-width: min(78vw, 280px);
     flex-shrink: 0;
     scroll-snap-align: start;
   }
-  .writing-cover { height: 170px; }
+  .writing-cover { height: 160px; }
+  .writing-card-title { font-size: 15px; }
+  .writing-card-desc { font-size: 12px; }
 
   /* ---- Notes / articles ---- */
   .notes-articles-section { padding: 40px 20px 48px; }
