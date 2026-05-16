@@ -35,6 +35,15 @@
   object-position: center;
   display: block;
 }
+
+.tks-project-thumb--contain {
+  background: #fff;
+  padding: 16px;
+}
+
+.tks-project-thumb--contain img {
+  object-fit: contain !important;
+}
 .tks-project-inner {
   padding: 20px 24px 28px;
   display: flex;
