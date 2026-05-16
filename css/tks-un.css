@@ -296,8 +296,17 @@
 /* ============================================================
    DECK VIEWER
    ============================================================ */
+.tks-un-page-hero {
+  height: 520px;
+  background: var(--cream);
+}
+.tks-un-page-cover {
+  object-fit: contain;
+  object-position: center;
+  padding: 24px;
+}
+
 .deck-viewer {
-  border-radius: 10px;
   overflow: hidden;
   background: #0d0818;
   margin-top: 8px;
@@ -309,6 +318,7 @@
   justify-content: space-between;
   padding: 11px 18px;
   background: var(--purple);
+  border-radius: 0;
 }
 
 .deck-viewer-title {
