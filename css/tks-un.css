@@ -299,7 +299,6 @@
 .deck-viewer {
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(28,2,82,0.15);
   background: #0d0818;
   margin-top: 8px;
 }
