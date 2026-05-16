@@ -134,16 +134,15 @@
 /* Platform screenshot */
 .fl-screenshot-link {
   display: block;
-  margin-top: 28px;
-  max-width: 520px;
+  margin-top: 4px;
 }
 
 .fl-screenshot {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  opacity: 0.95;
+  border-radius: 6px;
+  opacity: 0.9;
   transition: opacity 0.2s;
 }
 
