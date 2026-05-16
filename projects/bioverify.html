@@ -274,12 +274,15 @@
         function renderPage(n) {
           rendering = true;
           pdfDoc.getPage(n).then(function (page) {
+            var dpr = window.devicePixelRatio || 1;
             var vp = page.getViewport({ scale: 1 });
             var wrap = canvas.parentElement;
             var scale = wrap.clientWidth / vp.width;
-            var scaled = page.getViewport({ scale: scale });
+            var scaled = page.getViewport({ scale: scale * dpr });
             canvas.width = scaled.width;
             canvas.height = scaled.height;
+            canvas.style.width  = (scaled.width  / dpr) + 'px';
+            canvas.style.height = (scaled.height / dpr) + 'px';
             status.style.display = 'none';
             page.render({ canvasContext: ctx, viewport: scaled }).promise.then(function () {
               rendering = false;

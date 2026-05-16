@@ -331,12 +331,15 @@
       if (rendering || !pdfDoc) return;
       rendering = true;
       pdfDoc.getPage(num).then(function (page) {
+        const dpr  = window.devicePixelRatio || 1;
         const maxW = canvas.parentElement.clientWidth;
         const vp0  = page.getViewport({ scale: 1 });
-        const scale = Math.min(maxW / vp0.width, 2);
-        const vp    = page.getViewport({ scale });
+        const scale = maxW / vp0.width;
+        const vp    = page.getViewport({ scale: scale * dpr });
         canvas.width  = vp.width;
         canvas.height = vp.height;
+        canvas.style.width  = (vp.width  / dpr) + 'px';
+        canvas.style.height = (vp.height / dpr) + 'px';
         page.render({ canvasContext: ctx, viewport: vp }).promise.then(function () {
           rendering = false;
           currentEl.textContent = num;
