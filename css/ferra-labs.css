@@ -133,14 +133,12 @@
 
 /* Platform screenshot */
 .fl-page-content {
-  grid-template-columns: 1fr 460px;
+  grid-template-columns: 1fr 260px;
 }
 
 .fl-screenshot-link {
   display: block;
   margin-top: 8px;
-  transform: translateX(24px);
-  width: calc(100% + 24px);
 }
 
 .fl-screenshot {
@@ -290,6 +288,14 @@
   min-width: 56px;
   text-align: center;
   letter-spacing: 0.04em;
+}
+
+.fl-deck-caption {
+  font-size: 11px;
+  line-height: 1.6;
+  color: rgba(28,2,82,0.4);
+  margin-top: 12px;
+  font-style: italic;
 }
 
 .fl-deck-viewer:fullscreen .fl-deck-stage,
