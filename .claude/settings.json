@@ -43,7 +43,9 @@
       "Bash(curl -s -L -A \"Mozilla/5.0\" \"https://medium.com/@ivyokp/virality-vs-veracity-how-nlp-models-detect-false-narratives-at-scale-34cc265d0851\")",
       "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://borderless.so/stories/from-toronto-to-atlanta-why-i-chose-georgia-tech-over-canadian-universities\")",
       "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36\" \"https://borderless.so/stories/from-toronto-to-atlanta-why-i-chose-georgia-tech-over-canadian-universities\")",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(Select-String \"favicon|icon|initial\")",
+      "Bash(python3 -c ' *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Esther\\Downloads",
