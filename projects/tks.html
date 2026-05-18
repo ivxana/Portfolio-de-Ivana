@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,6 +28,7 @@
     <header class="topbar">
       <a href="../index.html"><img src="../assets/signature.png" alt="Ivana" class="logo-sig" /></a>
       <a href="../index.html#work" class="connect-link">&#x2190;&#xFE0E; BACK TO WORK</a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </header>
 
     <div class="project-page">
@@ -175,6 +176,35 @@
             <a href="bioverify.html" class="tks-project-link">VIEW FULL PROJECT &#x2192;&#xFE0E;</a>
           </div>
 
+          <!-- 04: ReCircle -->
+          <div class="tks-project-block">
+            <div>
+              <div class="tks-project-header">
+                <span class="tks-project-index">04</span>
+                <h3 class="tks-project-name">ReCircle</h3>
+                <span class="tks-project-tag">Product</span>
+              </div>
+              <p class="tks-project-desc">A closed-loop home resource system designed to eliminate waste by converting household materials into usable outputs in real-time &mdash; a fundamentally different model than recycling.</p>
+            </div>
+
+            <div class="tks-project-img">
+              <img src="../assets/recircle-hero.png" alt="ReCircle" />
+            </div>
+
+            <p class="tks-project-desc">The hardest part wasn&rsquo;t the technical architecture &mdash; it was reframing the problem. Recycling is still waste-management thinking. ReCircle starts from a different premise: what if the concept of waste didn&rsquo;t exist?</p>
+
+            <div class="tks-lessons">
+              <span class="tks-lessons-label">What it taught me</span>
+              <ul>
+                <li>How to challenge the problem definition itself, not just solve for it</li>
+                <li>Systems thinking at the scale of a home &mdash; not an institution or a government</li>
+                <li>Building in a domain I didn&rsquo;t come from forces clarity &mdash; you can&rsquo;t rely on jargon</li>
+              </ul>
+            </div>
+
+            <a href="recircle.html" class="tks-project-link">VIEW FULL PROJECT &#x2192;&#xFE0E;</a>
+          </div>
+
         </div>
 
         <div class="project-page-divider"></div>
@@ -207,5 +237,15 @@
     </footer>
 
   </main>
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close">&#x2715;</button>
+    <nav class="mobile-nav-links">
+      <a href="../index.html#about" class="mobile-nav-link"><span class="mobile-nav-num">01</span>ABOUT</a>
+      <a href="../index.html#work" class="mobile-nav-link"><span class="mobile-nav-num">02</span>WORK</a>
+      <a href="../index.html#writing" class="mobile-nav-link"><span class="mobile-nav-num">03</span>WRITING</a>
+      <a href="../index.html#notes" class="mobile-nav-link"><span class="mobile-nav-num">04</span>NOTES</a>
+    </nav>
+  </div>
+  <script src="../js/mobile-nav.js"></script>
 </body>
 </html>

@@ -29,6 +29,7 @@
     <header class="topbar">
       <a href="../index.html"><img src="../assets/signature.png" alt="Ivana" class="logo-sig" /></a>
       <a href="../index.html#work" class="connect-link">&#x2190;&#xFE0E; BACK TO WORK</a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </header>
 
     <div class="project-page">
@@ -46,6 +47,11 @@
 
         <h1 class="project-page-title">Ferra Labs</h1>
         <p class="project-page-subtitle">Drill Target Intelligence for Stimulated Geologic Hydrogen</p>
+
+        <div class="fl-award-strip">
+          <span class="fl-award-strip-star">&#x2605;</span>
+          <span class="fl-award-strip-text">Won the TKS Moonshot Innovation Award &mdash; highest-scoring solution across BOTH judging sessions. Out of 1,000 students globally. Built in three weeks.</span>
+        </div>
 
         <div class="project-page-divider"></div>
 
@@ -69,6 +75,16 @@
               <img src="../assets/Ferralabs-screenshot.png" alt="Ferra Labs demo platform" class="fl-screenshot" />
             </a>
           </div>
+        </div>
+
+        <div class="project-page-divider"></div>
+
+        <!-- Why It Mattered -->
+        <div class="fl-section">
+          <p class="fl-label">Why It Mattered</p>
+          <h2 class="fl-heading">Energy isn&rsquo;t my domain. That&rsquo;s exactly why I could see it clearly.</h2>
+          <p class="fl-text">I came in from civic tech and policy &mdash; I spent the first week of this project arguing with my team about whether energy was even the right space. But once I understood that this wasn&rsquo;t about energy itself &mdash; it was about access, about who gets to have resources and who doesn&rsquo;t, about a $26 trillion economy locked underground that could change which nations have power &mdash; I realized it was the same thing I&rsquo;d always cared about.</p>
+          <p class="fl-text">Access to digital literacy. Access to information. Access to energy. Same question, different domain. That&rsquo;s the connective tissue that makes Ferra Labs make sense on a portfolio that&rsquo;s also about civic tech and storytelling.</p>
         </div>
 
         <div class="project-page-divider"></div>
@@ -253,5 +269,15 @@
     </footer>
 
   </main>
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close">&#x2715;</button>
+    <nav class="mobile-nav-links">
+      <a href="../index.html#about" class="mobile-nav-link"><span class="mobile-nav-num">01</span>ABOUT</a>
+      <a href="../index.html#work" class="mobile-nav-link"><span class="mobile-nav-num">02</span>WORK</a>
+      <a href="../index.html#writing" class="mobile-nav-link"><span class="mobile-nav-num">03</span>WRITING</a>
+      <a href="../index.html#notes" class="mobile-nav-link"><span class="mobile-nav-num">04</span>NOTES</a>
+    </nav>
+  </div>
+  <script src="../js/mobile-nav.js"></script>
 </body>
 </html>

@@ -30,6 +30,7 @@
     <header class="topbar">
       <img src="assets/signature.png" alt="Ivana" class="logo-sig" />
       <a href="#contact" class="connect-link">LET'S CONNECT &#x2197;&#xFE0E;</a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </header>
 
     <!-- ABOUT / HERO SECTION -->
@@ -364,5 +365,15 @@
   </main>
 
   <script src="js/main.js"></script>
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close">&#x2715;</button>
+    <nav class="mobile-nav-links">
+      <a href="#about" class="mobile-nav-link"><span class="mobile-nav-num">01</span>ABOUT</a>
+      <a href="#work" class="mobile-nav-link"><span class="mobile-nav-num">02</span>WORK</a>
+      <a href="#writing" class="mobile-nav-link"><span class="mobile-nav-num">03</span>WRITING</a>
+      <a href="#notes" class="mobile-nav-link"><span class="mobile-nav-num">04</span>NOTES</a>
+    </nav>
+  </div>
+  <script src="js/mobile-nav.js"></script>
 </body>
 </html>

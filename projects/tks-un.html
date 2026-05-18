@@ -29,6 +29,7 @@
     <header class="topbar">
       <a href="../index.html"><img src="../assets/signature.png" alt="Ivana" class="logo-sig" /></a>
       <a href="tks.html" class="connect-link">&#x2190;&#xFE0E; BACK TO TKS</a>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </header>
 
     <div class="project-page">
@@ -389,5 +390,15 @@
     });
   })();
   </script>
+  <div class="mobile-nav-overlay" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close">&#x2715;</button>
+    <nav class="mobile-nav-links">
+      <a href="../index.html#about" class="mobile-nav-link"><span class="mobile-nav-num">01</span>ABOUT</a>
+      <a href="../index.html#work" class="mobile-nav-link"><span class="mobile-nav-num">02</span>WORK</a>
+      <a href="../index.html#writing" class="mobile-nav-link"><span class="mobile-nav-num">03</span>WRITING</a>
+      <a href="../index.html#notes" class="mobile-nav-link"><span class="mobile-nav-num">04</span>NOTES</a>
+    </nav>
+  </div>
+  <script src="../js/mobile-nav.js"></script>
 </body>
 </html>
