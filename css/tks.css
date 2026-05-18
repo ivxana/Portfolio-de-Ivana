@@ -1,0 +1,228 @@
+/* ============================================================
+   TKS PROJECT PAGE
+   ============================================================ */
+
+.tks-section { margin-bottom: 0; }
+
+.tks-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--purple);
+  opacity: 0.4;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.tks-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  color: var(--purple);
+  line-height: 1.25;
+  margin: 0 0 20px;
+}
+
+.tks-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(28,2,82,0.7);
+  margin-bottom: 16px;
+}
+
+.tks-callout {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--purple);
+  padding: 16px 20px;
+  border-left: 3px solid var(--purple);
+  margin: 8px 0 20px;
+  background: rgba(28,2,82,0.03);
+  line-height: 1.6;
+}
+
+/* ---- Key Projects ---- */
+.tks-project-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 28px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+
+.tks-project-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tks-project-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.tks-project-index {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple);
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.tks-project-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.tks-project-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: rgba(28,2,82,0.07);
+  padding: 3px 10px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.tks-project-img {
+  width: 100%;
+  height: 240px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.tks-project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.tks-project-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(28,2,82,0.7);
+  margin-bottom: 16px;
+}
+
+.tks-project-desc:last-child { margin-bottom: 0; }
+
+/* Lessons learned */
+.tks-lessons {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tks-lessons-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  opacity: 0.45;
+  margin-bottom: 4px;
+}
+
+.tks-lessons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tks-lessons li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(28,2,82,0.75);
+  padding-left: 18px;
+  position: relative;
+}
+
+.tks-lessons li::before {
+  content: '\2192';
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  opacity: 0.4;
+  font-size: 12px;
+  top: 3px;
+}
+
+/* Stat / recognition strip */
+.tks-stat-strip {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.tks-stat {
+  background: var(--purple);
+  color: #fff;
+  border-radius: 6px;
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.tks-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.tks-stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+}
+
+.tks-stat-plain {
+  background: var(--cream);
+  color: var(--purple);
+}
+
+.tks-stat-plain .tks-stat-num { color: var(--purple); }
+.tks-stat-plain .tks-stat-label { color: rgba(28,2,82,0.5); }
+
+/* Link */
+.tks-project-link {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  opacity: 0.6;
+  transition: opacity 0.15s;
+  align-self: flex-start;
+}
+
+.tks-project-link:hover { opacity: 1; }
+
+@media (max-width: 768px) {
+  .tks-project-img { height: 180px; }
+  .tks-stat-strip { flex-direction: column; }
+  .tks-stat { min-width: 0; }
+}
