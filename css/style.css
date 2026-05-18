@@ -1168,16 +1168,15 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 .about-bio-lead {
-  font-family: var(--font-display);
-  font-size: clamp(17px, 2vw, 22px);
-  line-height: 1.55;
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.7;
   color: var(--black);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .about-bio p {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.85;
   color: var(--gray-text);
 }
 
