@@ -442,14 +442,14 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 /* Placeholder image styles */
 .project-img-cover {
-  background: var(--white);
+  background: var(--cream);
   padding: 0;
 }
 
 .project-img-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   padding: 0;
   display: block;
