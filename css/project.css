@@ -245,3 +245,53 @@
   .tks-projects-grid { grid-template-columns: 1fr; gap: 16px; }
   .tks-project-thumb { height: 200px; }
 }
+
+/* ============================================================
+   COLLABORATION SECTION (shared)
+   ============================================================ */
+.collab-section {
+  padding-top: 0;
+}
+
+.collab-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 20px;
+}
+
+.collab-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.collab-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid var(--gray-light);
+  padding: 14px 18px;
+  min-width: 180px;
+}
+
+.collab-card-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.collab-card-role {
+  font-size: 11px;
+  color: var(--gray-text);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .collab-grid { gap: 10px; }
+  .collab-card { min-width: calc(50% - 5px); }
+}
