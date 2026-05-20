@@ -55,7 +55,9 @@
       "Bash(python -c ' *)",
       "Bash(git pull *)",
       "Bash(ls assets/article-*.jpg assets/article-*.png)",
-      "Bash(dir assets\\\\article-* /b)"
+      "Bash(dir assets\\\\article-* /b)",
+      "Bash(findstr -i recircle)",
+      "Bash(findstr -i knight)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Esther\\Downloads",

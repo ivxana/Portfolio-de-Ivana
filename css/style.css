@@ -1062,11 +1062,11 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .footer {
   background: var(--purple-dark);
   color: var(--white);
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   padding: 56px 48px 56px 40px;
-  gap: 40px;
+  position: relative;
 }
 
 .footer-cta {
@@ -1078,8 +1078,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .footer-contacts {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px 28px;
 }
 
 .footer-contact-link {
@@ -1093,7 +1094,14 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .footer-contact-link:hover { color: var(--white); }
 
-.footer-badge { display: flex; align-items: center; justify-content: center; }
+.footer-badge {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
 
 .footer-initial {
   width: 120px;
@@ -1563,7 +1571,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .tools-section { grid-template-columns: 1fr; padding: 40px 20px; gap: 28px; }
 
   /* ---- Footer ---- */
-  .footer { grid-template-columns: 1fr; padding: 40px 20px; gap: 24px; }
+  .footer { padding: 40px 20px; gap: 20px; }
   .footer-badge { display: none; }
 
   /* ---- About page ---- */
