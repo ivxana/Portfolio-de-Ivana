@@ -45,7 +45,15 @@
       "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36\" \"https://borderless.so/stories/from-toronto-to-atlanta-why-i-chose-georgia-tech-over-canadian-universities\")",
       "Bash(git commit *)",
       "Bash(Select-String \"favicon|icon|initial\")",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(findstr /i \"tks un unspun bioverify recircle medium article\")",
+      "Bash(git show *)",
+      "WebSearch",
+      "PowerShell(python --version 2>&1)",
+      "PowerShell(pip show pdfminer 2>&1)",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "Bash(git pull *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Esther\\Downloads",

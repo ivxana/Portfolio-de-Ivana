@@ -1520,6 +1520,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .hero-right { display: none; }
   .hero-photo { height: 320px; position: relative; overflow: hidden; }
+  .photo-frame img { object-fit: cover; object-position: center top; }
   .hero-left { padding: 32px 20px 28px; }
   .hero-title { font-size: clamp(42px, 12vw, 64px); }
   .hero-intro { max-width: 100%; font-size: 14px; }
