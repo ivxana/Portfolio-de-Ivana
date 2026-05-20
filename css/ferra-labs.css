@@ -159,7 +159,7 @@
 
 /* Platform screenshot */
 .fl-page-content {
-  grid-template-columns: 1fr 260px;
+  grid-template-columns: 1fr 320px;
 }
 
 .fl-screenshot-link {

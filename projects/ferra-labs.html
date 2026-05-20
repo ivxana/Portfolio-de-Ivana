@@ -228,9 +228,13 @@
     <script>
       pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
       (function () {
+        var SKIP = [4];
         var pdfDoc = null, pageNum = 1, rendering = false, canvas = document.getElementById('fl-deck-canvas'), ctx = canvas.getContext('2d');
         var status = document.getElementById('fl-deck-status'), pageInfo = document.getElementById('fl-page-info');
         var prevBtn = document.getElementById('fl-prev-btn'), nextBtn = document.getElementById('fl-next-btn');
+        function nextNum(n) { var x = n + 1; while (SKIP.indexOf(x) !== -1) x++; return x; }
+        function prevNum(n) { var x = n - 1; while (SKIP.indexOf(x) !== -1) x--; return x; }
+        function visNum(n) { var v = n; for (var i = 0; i < SKIP.length; i++) { if (SKIP[i] < n) v--; } return v; }
         function renderPage(n) {
           rendering = true;
           pdfDoc.getPage(n).then(function (page) {
@@ -246,9 +250,9 @@
             status.style.display = 'none';
             page.render({ canvasContext: ctx, viewport: scaled }).promise.then(function () {
               rendering = false;
-              pageInfo.textContent = n + ' / ' + pdfDoc.numPages;
-              prevBtn.disabled = n <= 1;
-              nextBtn.disabled = n >= pdfDoc.numPages;
+              pageInfo.textContent = visNum(n) + ' / ' + (pdfDoc.numPages - SKIP.length);
+              prevBtn.disabled = prevNum(n) < 1;
+              nextBtn.disabled = nextNum(n) > pdfDoc.numPages;
             });
           });
         }
@@ -256,8 +260,8 @@
           pdfDoc = doc;
           renderPage(pageNum);
         });
-        prevBtn.addEventListener('click', function () { if (pageNum > 1 && !rendering) { pageNum--; renderPage(pageNum); } });
-        nextBtn.addEventListener('click', function () { if (pdfDoc && pageNum < pdfDoc.numPages && !rendering) { pageNum++; renderPage(pageNum); } });
+        prevBtn.addEventListener('click', function () { if (!rendering && prevNum(pageNum) >= 1) { pageNum = prevNum(pageNum); renderPage(pageNum); } });
+        nextBtn.addEventListener('click', function () { if (pdfDoc && !rendering && nextNum(pageNum) <= pdfDoc.numPages) { pageNum = nextNum(pageNum); renderPage(pageNum); } });
         document.addEventListener('keydown', function (e) {
           if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextBtn.click();
           if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevBtn.click();
@@ -275,7 +279,7 @@
 
     <footer class="footer" id="contact">
       <div class="footer-left">
-        <h2 class="footer-cta">Let's build<br/>something that<br/>lasts.</h2>
+        <h2 class="footer-cta">Get in touch</h2>
       </div>
       <div class="footer-contacts">
         <a href="mailto:ivyokp@gmail.com" class="footer-contact-link">EMAIL &#x2197;&#xFE0E;</a>

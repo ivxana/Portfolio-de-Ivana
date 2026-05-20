@@ -25,9 +25,10 @@
     .svc-entry-dates { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--purple); opacity: 0.4; white-space: nowrap; }
     .svc-entry-body { display: flex; flex-direction: column; gap: 14px; }
     .svc-entry-desc { font-size: 14px; line-height: 1.75; color: rgba(28,2,82,0.7); margin: 0; }
-    .svc-entry-link { display: inline-block; margin-top: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--purple); opacity: 0.55; text-decoration: none; transition: opacity 0.15s; }
-    .svc-entry-link:hover { opacity: 1; }
     @media (max-width: 768px) { .svc-entry-dates { display: none; } }
+    .svc-entry-wrap { display: block; text-decoration: none; color: inherit; }
+    .svc-entry-wrap:hover .svc-entry-name { opacity: 0.65; }
+    .svc-entry-wrap:hover .svc-entry { border-top-color: rgba(28,2,82,0.25); }
   </style>
 </head>
 <body>
@@ -109,66 +110,72 @@
           <div class="svc-list">
 
             <!-- 01: Knights for Safe Spaces -->
-            <div class="svc-entry">
-              <div class="svc-entry-header">
-                <div class="svc-entry-logo-blank">K</div>
-                <div class="svc-entry-info">
-                  <h3 class="svc-entry-name">Knights for Safe Spaces</h3>
-                  <p class="svc-entry-role-title">Co-Executive</p>
+            <a href="knights.html" class="svc-entry-wrap">
+              <div class="svc-entry">
+                <div class="svc-entry-header">
+                  <div class="svc-entry-logo-blank">K</div>
+                  <div class="svc-entry-info">
+                    <h3 class="svc-entry-name">Knights for Safe Spaces</h3>
+                    <p class="svc-entry-role-title">Co-Executive</p>
+                  </div>
+                  <span class="svc-entry-dates">Sept 2025 - Present</span>
                 </div>
-                <span class="svc-entry-dates">Sept 2025 - Present</span>
+                <div class="svc-entry-body">
+                  <p class="svc-entry-desc">Running mental health programming for 2,000+ students at my school, with targeted support for international students.</p>
+                </div>
               </div>
-              <div class="svc-entry-body">
-                <p class="svc-entry-desc">Running mental health programming for 2,000+ students at my school, with targeted support for international students. I joined as a new student, saw the gap, and didn&rsquo;t wait to be invited - I ran for executive and won. Now I&rsquo;m building the resources I wish had existed when I arrived.</p>
-                <p class="svc-entry-desc">2,000+ students reached &nbsp;&middot;&nbsp; 100+ international students in targeted programming &nbsp;&middot;&nbsp; 30 volunteers led</p>
-              </div>
-            </div>
+            </a>
 
             <!-- 02: The Pink Stairs -->
-            <div class="svc-entry">
-              <div class="svc-entry-header">
-                <img src="../assets/thepinkstairlogo.jpg" class="svc-entry-logo" alt="The Pink Stairs" />
-                <div class="svc-entry-info">
-                  <h3 class="svc-entry-name">The Pink Stairs</h3>
-                  <p class="svc-entry-role-title">Outreach Executive</p>
+            <a href="pink-stairs.html" class="svc-entry-wrap">
+              <div class="svc-entry">
+                <div class="svc-entry-header">
+                  <img src="../assets/thepinkstairlogo.jpg" class="svc-entry-logo" alt="The Pink Stairs" />
+                  <div class="svc-entry-info">
+                    <h3 class="svc-entry-name">The Pink Stairs</h3>
+                    <p class="svc-entry-role-title">Outreach Executive</p>
+                  </div>
+                  <span class="svc-entry-dates">April 2026 - Present</span>
                 </div>
-                <span class="svc-entry-dates">April 2026 - Present</span>
+                <div class="svc-entry-body">
+                  <p class="svc-entry-desc">Global nonprofit supporting young women entering STEM - reaching 8.4M girls across 24 countries.</p>
+                </div>
               </div>
-              <div class="svc-entry-body">
-                <p class="svc-entry-desc">Global nonprofit supporting young women entering STEM - reaching 8.4M girls across 24 countries. I do outreach and partnership development, connecting the organization with mission-aligned institutions. Same skill I built at TKS, applied to a much bigger mission.</p>
-              </div>
-            </div>
+            </a>
 
             <!-- 03: CCYF -->
-            <div class="svc-entry">
-              <div class="svc-entry-header">
-                <img src="../assets/Canadian-council-of-young-feminisits.jpg" class="svc-entry-logo" alt="Canadian Council of Young Feminists" />
-                <div class="svc-entry-info">
-                  <h3 class="svc-entry-name">Canadian Council of Young Feminists</h3>
-                  <p class="svc-entry-role-title">Member, Vote16 Working Group</p>
+            <a href="ccyf.html" class="svc-entry-wrap">
+              <div class="svc-entry">
+                <div class="svc-entry-header">
+                  <img src="../assets/Canadian-council-of-young-feminisits.jpg" class="svc-entry-logo" alt="Canadian Council of Young Feminists" />
+                  <div class="svc-entry-info">
+                    <h3 class="svc-entry-name">Canadian Council of Young Feminists</h3>
+                    <p class="svc-entry-role-title">Member, Vote16 Working Group</p>
+                  </div>
+                  <span class="svc-entry-dates">May 2026 - Present</span>
                 </div>
-                <span class="svc-entry-dates">May 2026 - Present</span>
+                <div class="svc-entry-body">
+                  <p class="svc-entry-desc">Working to extend voting rights to 16-17 year olds through Bill S-222, through senator outreach, youth petitions, and op-eds.</p>
+                </div>
               </div>
-              <div class="svc-entry-body">
-                <p class="svc-entry-desc">A direct complement to Tallied - Tallied makes voting information accessible to first-time voters; CCYF Vote16 is expanding who gets to be a first-time voter, working to extend voting rights to 16-17 year olds through Bill S-222. I contribute through senator outreach, youth petitions, and op-eds.</p>
-                <a href="https://ccyf-ccjf.com/members-membres-3/ivana-okpakovwodo" target="_blank" rel="noopener" class="svc-entry-link">VIEW MEMBER PROFILE &#x2197;&#xFE0E;</a>
-              </div>
-            </div>
+            </a>
 
             <!-- 04: Milton Public Library -->
-            <div class="svc-entry">
-              <div class="svc-entry-header">
-                <img src="../assets/milton_public_library_logo.jpg" class="svc-entry-logo" alt="Milton Public Library" />
-                <div class="svc-entry-info">
-                  <h3 class="svc-entry-name">Milton Public Library</h3>
-                  <p class="svc-entry-role-title">Youth Advisory Member</p>
+            <a href="milton-library.html" class="svc-entry-wrap">
+              <div class="svc-entry">
+                <div class="svc-entry-header">
+                  <img src="../assets/milton_public_library_logo.jpg" class="svc-entry-logo" alt="Milton Public Library" />
+                  <div class="svc-entry-info">
+                    <h3 class="svc-entry-name">Milton Public Library</h3>
+                    <p class="svc-entry-role-title">Youth Advisory Member</p>
+                  </div>
+                  <span class="svc-entry-dates">Sept 2025 - Present</span>
                 </div>
-                <span class="svc-entry-dates">Sept 2025 - Present</span>
+                <div class="svc-entry-body">
+                  <p class="svc-entry-desc">Designing children&rsquo;s programming, teaching coding and literacy, and providing strategic input on book acquisitions.</p>
+                </div>
               </div>
-              <div class="svc-entry-body">
-                <p class="svc-entry-desc">I grew up in libraries. They were my community and lifeline - the spaces that shaped me. Now I serve them: designing children&rsquo;s programming, teaching coding and literacy, and providing strategic input on book acquisitions.</p>
-              </div>
-            </div>
+            </a>
 
           </div>
         </div>
@@ -189,7 +196,7 @@
 
     <footer class="footer" id="contact">
       <div class="footer-left">
-        <h2 class="footer-cta">Let's build<br/>something that<br/>lasts.</h2>
+        <h2 class="footer-cta">Get in touch</h2>
       </div>
       <div class="footer-contacts">
         <a href="mailto:ivyokp@gmail.com" class="footer-contact-link">EMAIL &#x2197;&#xFE0E;</a>
