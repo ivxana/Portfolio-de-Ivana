@@ -318,8 +318,6 @@
 .tl-app-screenshot {
   width: 320px;
   max-width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 12px 48px rgba(28,2,82,0.12);
   display: block;
 }
 
