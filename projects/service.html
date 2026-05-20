@@ -12,6 +12,23 @@
   <link rel="stylesheet" href="../css/project.css" />
   <link rel="stylesheet" href="../css/tallied.css" />
   <link rel="stylesheet" href="../css/tks.css" />
+  <style>
+    .svc-list { margin-top: 28px; }
+    .svc-entry { border-top: 1px solid var(--gray-light); padding: 32px 0 24px; }
+    .svc-entry:last-child { border-bottom: 1px solid var(--gray-light); }
+    .svc-entry-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .svc-entry-logo { width: 44px; height: 44px; border-radius: 8px; object-fit: contain; background: #fff; border: 1px solid rgba(28,2,82,0.08); padding: 4px; flex-shrink: 0; }
+    .svc-entry-logo-blank { width: 44px; height: 44px; border-radius: 8px; background: rgba(28,2,82,0.06); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--purple); opacity: 0.5; }
+    .svc-entry-info { flex: 1; min-width: 0; }
+    .svc-entry-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--purple); margin: 0 0 3px; line-height: 1.2; }
+    .svc-entry-role-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: rgba(28,2,82,0.55); margin: 0; text-transform: uppercase; }
+    .svc-entry-dates { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; color: var(--purple); opacity: 0.4; white-space: nowrap; }
+    .svc-entry-body { display: flex; flex-direction: column; gap: 14px; }
+    .svc-entry-desc { font-size: 14px; line-height: 1.75; color: rgba(28,2,82,0.7); margin: 0; }
+    .svc-entry-link { display: inline-block; margin-top: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--purple); opacity: 0.55; text-decoration: none; transition: opacity 0.15s; }
+    .svc-entry-link:hover { opacity: 1; }
+    @media (max-width: 768px) { .svc-entry-dates { display: none; } }
+  </style>
 </head>
 <body>
 
@@ -89,128 +106,71 @@
           <p class="tl-label">Roles</p>
           <h2 class="tl-heading">Four communities. One thread.</h2>
 
-          <!-- Role 01: Knights for Safe Spaces -->
-          <div class="tks-project-block">
-            <div>
-              <div class="tks-project-header">
-                <span class="tks-project-index">01</span>
-                <h3 class="tks-project-name">Knights for Safe Spaces</h3>
-                <span class="tks-project-tag">Sept 2025 &ndash; Present</span>
-              </div>
-              <p class="tl-label" style="margin-top:4px;">Co-Executive</p>
-            </div>
+          <div class="svc-list">
 
-            <p class="tks-project-desc">I joined this club as a new student - and as an international student, I saw the lack of mental health resources at my school firsthand, especially for people like me. I didn&rsquo;t wait to be invited. I joined as an executive and won the role.</p>
-
-            <div class="tl-callout">
-              Now I&rsquo;m building the resources I wish had existed when I arrived.
-            </div>
-
-            <div class="tks-stat-strip">
-              <div class="tks-stat">
-                <span class="tks-stat-num">2,000+</span>
-                <span class="tks-stat-label">students reached through mental health programming</span>
+            <!-- 01: Knights for Safe Spaces -->
+            <div class="svc-entry">
+              <div class="svc-entry-header">
+                <div class="svc-entry-logo-blank">K</div>
+                <div class="svc-entry-info">
+                  <h3 class="svc-entry-name">Knights for Safe Spaces</h3>
+                  <p class="svc-entry-role-title">Co-Executive</p>
+                </div>
+                <span class="svc-entry-dates">Sept 2025 - Present</span>
               </div>
-              <div class="tks-stat tks-stat-plain">
-                <span class="tks-stat-num">100+</span>
-                <span class="tks-stat-label">international students in targeted programming</span>
-              </div>
-              <div class="tks-stat tks-stat-plain">
-                <span class="tks-stat-num">30</span>
-                <span class="tks-stat-label">volunteers led</span>
+              <div class="svc-entry-body">
+                <p class="svc-entry-desc">Running mental health programming for 2,000+ students at my school, with targeted support for international students. I joined as a new student, saw the gap, and didn&rsquo;t wait to be invited - I ran for executive and won. Now I&rsquo;m building the resources I wish had existed when I arrived.</p>
+                <p class="svc-entry-desc">2,000+ students reached &nbsp;&middot;&nbsp; 100+ international students in targeted programming &nbsp;&middot;&nbsp; 30 volunteers led</p>
               </div>
             </div>
 
-            <div class="tks-lessons">
-              <span class="tks-lessons-label">Leadership learning</span>
-              <ul>
-                <li>Asking &ldquo;what am I missing?&rdquo; before finalizing decisions</li>
-                <li>Designing for the people in the room who haven&rsquo;t spoken yet</li>
-              </ul>
+            <!-- 02: The Pink Stairs -->
+            <div class="svc-entry">
+              <div class="svc-entry-header">
+                <img src="../assets/thepinkstairlogo.jpg" class="svc-entry-logo" alt="The Pink Stairs" />
+                <div class="svc-entry-info">
+                  <h3 class="svc-entry-name">The Pink Stairs</h3>
+                  <p class="svc-entry-role-title">Outreach Executive</p>
+                </div>
+                <span class="svc-entry-dates">April 2026 - Present</span>
+              </div>
+              <div class="svc-entry-body">
+                <p class="svc-entry-desc">Global nonprofit supporting young women entering STEM - reaching 8.4M girls across 24 countries. I do outreach and partnership development, connecting the organization with mission-aligned institutions. Same skill I built at TKS, applied to a much bigger mission.</p>
+              </div>
             </div>
+
+            <!-- 03: CCYF -->
+            <div class="svc-entry">
+              <div class="svc-entry-header">
+                <img src="../assets/Canadian-council-of-young-feminisits.jpg" class="svc-entry-logo" alt="Canadian Council of Young Feminists" />
+                <div class="svc-entry-info">
+                  <h3 class="svc-entry-name">Canadian Council of Young Feminists</h3>
+                  <p class="svc-entry-role-title">Member, Vote16 Working Group</p>
+                </div>
+                <span class="svc-entry-dates">May 2026 - Present</span>
+              </div>
+              <div class="svc-entry-body">
+                <p class="svc-entry-desc">A direct complement to Tallied - Tallied makes voting information accessible to first-time voters; CCYF Vote16 is expanding who gets to be a first-time voter, working to extend voting rights to 16-17 year olds through Bill S-222. I contribute through senator outreach, youth petitions, and op-eds.</p>
+                <a href="https://ccyf-ccjf.com/members-membres-3/ivana-okpakovwodo" target="_blank" rel="noopener" class="svc-entry-link">VIEW MEMBER PROFILE &#x2197;&#xFE0E;</a>
+              </div>
+            </div>
+
+            <!-- 04: Milton Public Library -->
+            <div class="svc-entry">
+              <div class="svc-entry-header">
+                <img src="../assets/milton_public_library_logo.jpg" class="svc-entry-logo" alt="Milton Public Library" />
+                <div class="svc-entry-info">
+                  <h3 class="svc-entry-name">Milton Public Library</h3>
+                  <p class="svc-entry-role-title">Youth Advisory Member</p>
+                </div>
+                <span class="svc-entry-dates">Sept 2025 - Present</span>
+              </div>
+              <div class="svc-entry-body">
+                <p class="svc-entry-desc">I grew up in libraries. They were my community and lifeline - the spaces that shaped me. Now I serve them: designing children&rsquo;s programming, teaching coding and literacy, and providing strategic input on book acquisitions.</p>
+              </div>
+            </div>
+
           </div>
-
-          <!-- Role 02: The Pink Stairs -->
-          <div class="tks-project-block">
-            <div>
-              <div class="tks-project-header">
-                <span class="tks-project-index">02</span>
-                <h3 class="tks-project-name">The Pink Stairs</h3>
-                <span class="tks-project-tag">April 2026 &ndash; Present</span>
-              </div>
-              <p class="tl-label" style="margin-top:4px;">Outreach Executive</p>
-            </div>
-
-            <p class="tks-project-desc">The natural evolution: I spent two years doing outreach for myself through TKS - cold-emailing researchers, building my own network. Now I&rsquo;m doing outreach for a global nonprofit. Same skill, much bigger mission.</p>
-
-            <div class="tks-stat-strip">
-              <div class="tks-stat">
-                <span class="tks-stat-num">8.4M</span>
-                <span class="tks-stat-label">girls reached across 24 countries in STEM</span>
-              </div>
-              <div class="tks-stat tks-stat-plain">
-                <span class="tks-stat-num">24</span>
-                <span class="tks-stat-label">countries</span>
-              </div>
-            </div>
-
-            <div class="tks-lessons">
-              <span class="tks-lessons-label">What I do</span>
-              <ul>
-                <li>Build partnerships with mission-aligned organizations</li>
-                <li>Said no to leading the coding program (not qualified to teach fundamentals) - protected program quality</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Role 03: CCYF Vote16 -->
-          <div class="tks-project-block">
-            <div>
-              <div class="tks-project-header">
-                <span class="tks-project-index">03</span>
-                <h3 class="tks-project-name">Canadian Council of Young Feminists</h3>
-                <span class="tks-project-tag">May 2026 &ndash; Present</span>
-              </div>
-              <p class="tl-label" style="margin-top:4px;">Member, Vote16 Working Group</p>
-            </div>
-
-            <p class="tks-project-desc">A direct complement to Tallied. Tallied makes voting information accessible to first-time voters. CCYF Vote16 is working to expand who gets to be a first-time voter - extending voting rights to 16&ndash;17 year olds through Bill S-222.</p>
-
-            <div class="tks-lessons">
-              <span class="tks-lessons-label">How I contribute</span>
-              <ul>
-                <li>Senator outreach</li>
-                <li>Youth petitions</li>
-                <li>Op-eds</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Role 04: Milton Public Library -->
-          <div class="tks-project-block">
-            <div>
-              <div class="tks-project-header">
-                <span class="tks-project-index">04</span>
-                <h3 class="tks-project-name">Milton Public Library</h3>
-                <span class="tks-project-tag">Sept 2025 &ndash; Present</span>
-              </div>
-              <p class="tl-label" style="margin-top:4px;">Youth Advisory Member</p>
-            </div>
-
-            <div class="tl-callout">
-              I grew up in libraries. They were my community, my lifeline, the spaces that shaped me into who I am. Now I&rsquo;m serving them.
-            </div>
-
-            <div class="tks-lessons">
-              <span class="tks-lessons-label">What I do</span>
-              <ul>
-                <li>Design programming for children</li>
-                <li>Volunteer teaching coding and literacy</li>
-                <li>Strategic input on book acquisitions</li>
-              </ul>
-            </div>
-          </div>
-
         </div>
 
         <div class="project-page-divider"></div>
