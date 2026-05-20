@@ -132,7 +132,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
    ============================================================ */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 460px 280px;
+  grid-template-columns: 1fr 340px 300px;
   gap: 0;
   min-height: 88vh;
   border-bottom: 1px solid var(--gray-light);
@@ -1491,7 +1491,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
-  .hero { grid-template-columns: 1fr 420px; }
+  .hero { grid-template-columns: 1fr 280px; }
   .hero-right { display: none; }
   .beliefs-section { grid-template-columns: 1fr 1fr; }
   .sticky-col, .currently-col { grid-column: span 1; }
