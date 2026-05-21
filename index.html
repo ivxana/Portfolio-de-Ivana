@@ -175,74 +175,89 @@
     <section class="work-section" id="work">
       <div class="work-header">
         <h2 class="work-title">Selected Projects</h2>
-        <div class="carousel-controls">
-          <button class="carousel-btn" id="prev-btn">&#x2039;</button>
-          <button class="carousel-btn" id="next-btn">&#x203A;</button>
-        </div>
       </div>
 
-      <div class="projects-track-wrap">
-        <div class="projects-track" id="projects-track">
+      <!-- Featured tier -->
+      <div class="featured-grid">
 
-          <article class="project-card" onclick="location.href='projects/tallied.html'" style="cursor:pointer;">
-            <div class="project-num">01</div>
-            <div class="project-img-wrap">
-              <div class="project-img project-img-cover">
-                <img src="assets/tallied-thumbnail01.png" alt="Tallied" />
-              </div>
-            </div>
-            <h3>Tallied</h3>
-            <p>A personalized voting guide that helps citizens make informed decisions at the ballot box.</p>
-            <a href="projects/tallied.html" class="view-project">VIEW PROJECT &#x2192;&#xFE0E;</a>
-          </article>
+        <a href="projects/tallied.html" class="featured-card">
+          <div class="featured-card-img">
+            <img src="assets/tallied-thumbnail01.png" alt="Tallied" />
+          </div>
+          <div class="featured-card-body">
+            <span class="featured-card-num">01</span>
+            <h3 class="featured-card-title">Tallied</h3>
+            <p class="featured-card-desc">A personalized voting guide that helps citizens make informed decisions at the ballot box.</p>
+            <span class="featured-card-view">VIEW PROJECT &#x2192;&#xFE0E;</span>
+          </div>
+        </a>
 
-          <article class="project-card" onclick="location.href='projects/tks.html'" style="cursor:pointer;">
-            <div class="project-num">02</div>
-            <div class="project-img-wrap">
-              <div class="project-img project-img-cover">
-                <img src="assets/bigtks.png" alt="TKS" />
-              </div>
-            </div>
-            <h3>TKS</h3>
-            <p>Accelerating the world's most ambitious young people through immersive, high-impact programming.</p>
-            <a href="projects/tks.html" class="view-project">VIEW PROJECT &#x2192;&#xFE0E;</a>
-          </article>
+        <a href="projects/ferra-labs.html" class="featured-card">
+          <div class="featured-card-img">
+            <img src="assets/ferra-labs-thumbnail01.png" alt="Ferra Labs" />
+          </div>
+          <div class="featured-card-body">
+            <span class="featured-card-num">02</span>
+            <h3 class="featured-card-title">Ferra Labs</h3>
+            <p class="featured-card-desc">AI drill-target intelligence for clean hydrogen. Built in 3 weeks, won the TKS Moonshot Innovation Award. Top score across both judging rounds.</p>
+            <span class="featured-card-view">VIEW PROJECT &#x2192;&#xFE0E;</span>
+          </div>
+        </a>
 
-          <article class="project-card" onclick="location.href='projects/service.html'" style="cursor:pointer;">
-            <div class="project-num">03</div>
-            <div class="project-img-wrap">
-              <div class="project-img project-img-cover">
-                <img src="assets/bigservice.png" alt="Service" />
-              </div>
-            </div>
-            <h3>Service</h3>
-            <p>Small actions, real impact - showing up for community through deliberate and consistent service.</p>
-            <a href="projects/service.html" class="view-project">VIEW PROJECT &#x2192;&#xFE0E;</a>
-          </article>
+        <a href="projects/tks-un.html" class="featured-card">
+          <div class="featured-card-img">
+            <img src="assets/tks-x-un.png" alt="UN South Sudan" />
+          </div>
+          <div class="featured-card-body">
+            <span class="featured-card-num">03</span>
+            <h3 class="featured-card-title">UN South Sudan</h3>
+            <p class="featured-card-desc">A 30-day consulting challenge on pastoralist conflict. I led narrative, outreach, and expert sourcing. #1 in cohort.</p>
+            <span class="featured-card-view">VIEW PROJECT &#x2192;&#xFE0E;</span>
+          </div>
+        </a>
 
-          <article class="project-card" onclick="location.href='projects/ferra-labs.html'" style="cursor:pointer;">
-            <div class="project-num">04</div>
-            <div class="project-img-wrap">
-              <div class="project-img project-img-cover">
-                <img src="assets/ferra-labs-thumbnail01.png" alt="Ferra Labs" />
-              </div>
-            </div>
-            <h3>Ferra Labs</h3>
-            <p>Shaping the intersection of technology and human impact through research and strategic innovation.</p>
-            <a href="projects/ferra-labs.html" class="view-project">VIEW PROJECT &#x2192;&#xFE0E;</a>
-          </article>
+      </div>
 
-          <article class="project-card" onclick="location.href='projects/clubs.html'" style="cursor:pointer;">
-            <div class="project-num">05</div>
-            <div class="project-img-wrap">
-              <div class="project-img project-img-cover">
-                <img src="assets/competitions.png" alt="Competitions" />
-              </div>
+      <!-- Secondary tier -->
+      <div class="secondary-projects">
+        <div class="secondary-projects-header">
+          <span class="secondary-projects-label">More Projects</span>
+          <p class="secondary-projects-sub">Proof-of-concepts and hackathon builds.</p>
+        </div>
+        <div class="secondary-grid">
+
+          <a href="projects/unspun.html" class="secondary-card">
+            <div class="secondary-card-img">
+              <img src="assets/unspun-hero.jpeg" alt="UNSPUN" />
             </div>
-            <h3>Competitions</h3>
-            <p>DECA Provincials, Mock Trial, case competitions - how I learned to argue, sell, and think under pressure.</p>
-            <a href="projects/clubs.html" class="view-project">VIEW PROJECT &#x2192;&#xFE0E;</a>
-          </article>
+            <div class="secondary-card-body">
+              <h3 class="secondary-card-title">UNSPUN</h3>
+              <p class="secondary-card-desc">An AI manipulation detector. The hard part wasn&rsquo;t the build &mdash; it was defining what manipulation even is, without injecting my own bias.</p>
+              <span class="secondary-card-view">VIEW &#x2192;&#xFE0E;</span>
+            </div>
+          </a>
+
+          <a href="projects/bioverify.html" class="secondary-card">
+            <div class="secondary-card-img">
+              <img src="assets/bioverify-hero.png" alt="BioVerify" />
+            </div>
+            <div class="secondary-card-body">
+              <h3 class="secondary-card-title">BioVerify</h3>
+              <p class="secondary-card-desc">Low-cost biosensing to detect flu signals in school air. Built in 2 hours during a hackathon. Won.</p>
+              <span class="secondary-card-view">VIEW &#x2192;&#xFE0E;</span>
+            </div>
+          </a>
+
+          <a href="projects/recircle.html" class="secondary-card">
+            <div class="secondary-card-img">
+              <img src="assets/recircle-hero.png" alt="ReCircle" />
+            </div>
+            <div class="secondary-card-body">
+              <h3 class="secondary-card-title">ReCircle</h3>
+              <p class="secondary-card-desc">A closed-loop home resource system that eliminates waste entirely &mdash; not manages it. A different premise than recycling.</p>
+              <span class="secondary-card-view">VIEW &#x2192;&#xFE0E;</span>
+            </div>
+          </a>
 
         </div>
       </div>
@@ -257,19 +272,32 @@
 
       <div class="beyond-grid">
 
-        <a href="projects/clubs.html" class="beyond-comp-card">
+        <a href="projects/tks.html" class="beyond-comp-card">
           <div class="beyond-comp-logos">
-            <img src="assets/deca.jpeg" class="beyond-logo" alt="DECA" />
-            <img src="assets/lawthingywebsite.svg" class="beyond-logo" alt="Mock Trial" />
+            <img src="assets/tkslogo.png" class="beyond-logo" alt="TKS" />
           </div>
-          <h3>Competitions</h3>
-          <p>DECA Provincials and Mock Trial - two very different kinds of pressure. Individual vs. team. Business strategy vs. legal argumentation. I love both for different reasons.</p>
+          <h3>TKS</h3>
+          <p>The accelerator that rewired how I work. Not just the builds &mdash; the community, the people, and learning to move without permission.</p>
           <span class="beyond-view">VIEW &#x2192;&#xFE0E;</span>
         </a>
 
-        <div class="beyond-personal">
-          <p class="beyond-personal-text">When I&rsquo;m not building, I&rsquo;m competing, reading, or thinking through problems that don&rsquo;t have clean solutions. Six countries and counting.</p>
-        </div>
+        <a href="projects/clubs.html" class="beyond-comp-card">
+          <div class="beyond-comp-logos">
+            <img src="assets/deca.jpeg" class="beyond-logo" alt="DECA" />
+          </div>
+          <h3>DECA</h3>
+          <p>Where I learned to sell an idea under pressure. Placed at Provincials my first year.</p>
+          <span class="beyond-view">VIEW &#x2192;&#xFE0E;</span>
+        </a>
+
+        <a href="projects/clubs.html" class="beyond-comp-card">
+          <div class="beyond-comp-logos">
+            <img src="assets/lawthingywebsite.svg" class="beyond-logo" alt="Mock Trial" />
+          </div>
+          <h3>Mock Trial</h3>
+          <p>Cross-examination, teamwork, and the thrill of building a case with people you trust.</p>
+          <span class="beyond-view">VIEW &#x2192;&#xFE0E;</span>
+        </a>
 
       </div>
     </section>

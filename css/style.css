@@ -320,9 +320,8 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
    ============================================================ */
 .work-section {
   background: var(--cream);
-  padding: 60px 0 60px 40px;
+  padding: 60px 40px;
   border-bottom: 1px solid var(--gray-light);
-  overflow: hidden;
 }
 
 .work-header {
@@ -330,8 +329,179 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   align-items: flex-end;
   gap: 32px;
   margin-bottom: 40px;
-  padding-right: 40px;
-  position: relative;
+}
+
+/* Featured projects grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid rgba(28,2,82,0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(28,2,82,0.1);
+}
+
+.featured-card-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+
+.featured-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-card-body {
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.featured-card-num {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(28,2,82,0.35);
+  letter-spacing: 0.12em;
+}
+
+.featured-card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.featured-card-desc {
+  font-size: 13px;
+  color: rgba(28,2,82,0.65);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+.featured-card-view {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-top: 6px;
+}
+
+/* Secondary projects row */
+.secondary-projects {
+  border-top: 1px solid var(--gray-light);
+  padding-top: 40px;
+}
+
+.secondary-projects-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.secondary-projects-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(28,2,82,0.4);
+}
+
+.secondary-projects-sub {
+  font-size: 13px;
+  color: rgba(28,2,82,0.4);
+  margin: 0;
+}
+
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.secondary-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid rgba(28,2,82,0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.secondary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(28,2,82,0.08);
+}
+
+.secondary-card-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+
+.secondary-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.secondary-card-body {
+  padding: 14px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.secondary-card-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+}
+
+.secondary-card-desc {
+  font-size: 12px;
+  color: rgba(28,2,82,0.6);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.secondary-card-view {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  opacity: 0.4;
+  margin-top: 4px;
 }
 
 .section-label-vertical {
@@ -795,7 +965,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 .beyond-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 28px;
 }
 .beyond-comp-card {
@@ -1726,9 +1896,11 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .handwritten-note { font-size: 14px; }
 
   /* ---- Work section ---- */
-  .work-section { padding: 40px 0 40px 20px; }
-  .work-header { padding-right: 20px; margin-bottom: 24px; gap: 16px; }
-  .carousel-controls { display: none; }
+  .work-section { padding: 40px 20px; }
+  .work-header { margin-bottom: 24px; gap: 16px; }
+  .featured-grid { grid-template-columns: 1fr; gap: 16px; margin-bottom: 36px; }
+  .secondary-grid { grid-template-columns: 1fr; gap: 12px; }
+  .secondary-projects-header { flex-direction: column; gap: 4px; }
 
   /* ---- Writing section → vertical stack ---- */
   .writing-section { padding: 48px 20px; }
