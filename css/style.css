@@ -770,6 +770,198 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 /* ============================================================
+   BEYOND THE BUILD SECTION
+   ============================================================ */
+.beyond-section {
+  padding: 80px 60px;
+  background: var(--white);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.beyond-section .section-header-row { margin-bottom: 48px; }
+.beyond-section .section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 8px;
+  display: block;
+}
+.beyond-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--purple);
+  margin: 0;
+}
+.beyond-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.beyond-comp-card {
+  display: block;
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 32px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.beyond-comp-card:hover { opacity: 0.8; }
+.beyond-comp-logos {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.beyond-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(28,2,82,0.08);
+  padding: 3px;
+  flex-shrink: 0;
+}
+.beyond-comp-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0 0 10px;
+}
+.beyond-comp-card p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(28,2,82,0.65);
+  margin: 0 0 20px;
+}
+.beyond-view {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--purple);
+  opacity: 0.45;
+}
+.beyond-personal {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+.beyond-personal-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 2vw, 24px);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--purple);
+  opacity: 0.6;
+}
+
+/* ============================================================
+   SOCIAL IMPACT SECTION
+   ============================================================ */
+.impact-section {
+  padding: 80px 60px;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.impact-section .section-header-row { margin-bottom: 48px; }
+.impact-section .section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 8px;
+  display: block;
+}
+.impact-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--purple);
+  margin: 0;
+}
+.impact-org-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+.impact-org-card {
+  display: block;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 22px 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.impact-org-card:hover { opacity: 0.8; }
+.impact-org-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--cream);
+  border: 1px solid rgba(28,2,82,0.08);
+  padding: 4px;
+  display: block;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+.impact-org-logo-blank {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(28,2,82,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 14px;
+}
+.impact-org-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0 0 5px;
+  line-height: 1.3;
+}
+.impact-org-role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: rgba(28,2,82,0.45);
+  text-transform: uppercase;
+  margin: 0;
+}
+.impact-journalism {
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-light);
+}
+.impact-journalism-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(28,2,82,0.4);
+  margin-bottom: 16px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .beyond-section { padding: 48px 20px; }
+  .beyond-grid { grid-template-columns: 1fr; }
+  .impact-section { padding: 48px 20px; }
+  .impact-org-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
    QUOTE + NOTES
    ============================================================ */
 .quote-notes-section {
