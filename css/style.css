@@ -1150,10 +1150,31 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 @media (max-width: 768px) {
   .beyond-section { padding: 48px 20px; }
-  .beyond-grid { grid-template-columns: 1fr; }
+  .beyond-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .beyond-grid::-webkit-scrollbar { display: none; }
+  .beyond-card { flex: 0 0 260px; scroll-snap-align: start; }
+
   .impact-section { padding: 48px 20px; }
-  .impact-org-grid { grid-template-columns: 1fr; }
-  .impact-org-card-wide { grid-column: auto; }
+  .impact-org-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .impact-org-grid::-webkit-scrollbar { display: none; }
+  .impact-org-card,
+  .impact-org-card-wide { flex: 0 0 280px; scroll-snap-align: start; grid-column: auto; }
 }
 
 /* ============================================================
@@ -1923,26 +1944,62 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   /* ---- Work section ---- */
   .work-section { padding: 40px 20px; }
   .work-header { margin-bottom: 24px; gap: 16px; }
-  .featured-grid { grid-template-columns: 1fr; gap: 16px; margin-bottom: 36px; }
-  .secondary-grid { grid-template-columns: 1fr; gap: 12px; }
+  .featured-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    padding-bottom: 12px;
+    margin-bottom: 36px;
+  }
+  .featured-grid::-webkit-scrollbar { display: none; }
+  .featured-card { flex: 0 0 85vw; scroll-snap-align: start; }
+  .secondary-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .secondary-grid::-webkit-scrollbar { display: none; }
+  .secondary-card { flex: 0 0 75vw; scroll-snap-align: start; }
   .secondary-projects-header { flex-direction: column; gap: 4px; }
 
-  /* ---- Writing section → vertical stack ---- */
+  /* ---- Writing section → carousel ---- */
   .writing-section { padding: 48px 20px; }
   .writing-section .section-header-row { margin-bottom: 28px; }
   .writing-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     gap: 16px;
+    padding-bottom: 12px;
   }
-  .writing-card { min-width: unset; }
+  .writing-grid::-webkit-scrollbar { display: none; }
+  .writing-card { flex: 0 0 280px; scroll-snap-align: start; min-width: 0; }
   .writing-cover { height: 180px; }
   .writing-card-title { font-size: 15px; }
   .writing-card-desc { font-size: 12px; }
 
-  /* ---- Notes / articles ---- */
+  /* ---- Notes / articles → carousel ---- */
   .notes-articles-section { padding: 40px 20px 48px; }
-  .articles-grid { grid-template-columns: 1fr; }
+  .articles-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+  .articles-grid::-webkit-scrollbar { display: none; }
+  .article-card { flex: 0 0 240px; scroll-snap-align: start; }
 
   /* ---- Quote + notes ---- */
   .quote-notes-section { grid-template-columns: 1fr; }
