@@ -60,7 +60,9 @@
       "Bash(findstr -i knight)",
       "Bash(findstr -i \"newservice\")",
       "Bash(findstr -i \"lawthingyw\\\\|competitionhero\\\\|deca\")",
-      "Bash(findstr -i \"unspun\")"
+      "Bash(findstr -i \"unspun\")",
+      "Bash(sed -i 's|href=\"assets/initial.png\" type=\"image/png\"|href=\"assets/favicon.png\" type=\"image/png\"|g' index.html borderless.html medium.html substack.html writing.html)",
+      "Bash(sed -i 's|href=\"../assets/initial.png\" type=\"image/png\"|href=\"../assets/favicon.png\" type=\"image/png\"|g' projects/bioverify.html projects/borderless.html projects/ccyf.html projects/clubs.html projects/deca.html projects/ferra-labs.html projects/knights.html projects/milton-library.html projects/mock-trial.html projects/pink-stairs.html projects/recircle.html projects/service.html projects/tallied.html projects/tks-un.html projects/tks.html projects/unspun.html)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Esther\\Downloads",
