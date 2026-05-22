@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="../assets/initial.png" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milton Public Library - Ivana Okpakovwodo</title>
+  <title>Borderless - Ivana Okpakovwodo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
@@ -16,6 +16,10 @@
     .svc-org-logo { width: 56px; height: 56px; border-radius: 10px; object-fit: contain; background: #fff; border: 1px solid rgba(28,2,82,0.08); padding: 4px; flex-shrink: 0; }
     .svc-org-name { font-family: var(--font-display); font-size: clamp(22px, 3vw, 32px); font-weight: 700; color: var(--purple); margin: 0 0 4px; line-height: 1.2; }
     .svc-org-meta { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: rgba(28,2,82,0.45); text-transform: uppercase; }
+    .svc-stat-row { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 24px; }
+    .svc-stat { display: flex; flex-direction: column; gap: 4px; }
+    .svc-stat-num { font-family: var(--font-display); font-size: clamp(24px, 3vw, 36px); font-weight: 900; color: var(--purple); line-height: 1; }
+    .svc-stat-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(28,2,82,0.45); }
   </style>
 </head>
 <body>
@@ -23,9 +27,11 @@
   <nav class="sidenav">
     <ul class="sidenav-links">
       <li><span class="nav-num">01</span><a href="../index.html#about">ABOUT</a></li>
-      <li><span class="nav-num">02</span><a href="../index.html#work">WORK</a></li>
-      <li><span class="nav-num">03</span><a href="../index.html#writing">WRITING</a></li>
-      <li><span class="nav-num">04</span><a href="../index.html#notes">NOTES</a></li>
+      <li><span class="nav-num">02</span><a href="../index.html#work">PROJECTS</a></li>
+      <li><span class="nav-num">03</span><a href="../index.html#beyond">BEYOND</a></li>
+      <li><span class="nav-num">04</span><a href="../index.html#impact">IMPACT</a></li>
+      <li><span class="nav-num">05</span><a href="../index.html#writing">WRITING</a></li>
+      <li><span class="nav-num">06</span><a href="../index.html#notes">NOTES</a></li>
     </ul>
   </nav>
 
@@ -41,42 +47,52 @@
       <div class="project-page-body">
 
         <div class="svc-org-header">
-          <img src="../assets/milton_public_library_logo.jpg" class="svc-org-logo" alt="Milton Public Library" />
+          <img src="../assets/borderless.png" class="svc-org-logo" alt="Borderless" />
           <div>
-            <h1 class="svc-org-name">Milton Public Library</h1>
-            <p class="svc-org-meta">Youth Advisory Member &nbsp;&middot;&nbsp; Sept 2025 - Present</p>
+            <h1 class="svc-org-name">Borderless</h1>
+            <p class="svc-org-meta">Journalism Intern &nbsp;&middot;&nbsp; 2026 &ndash; Present</p>
           </div>
         </div>
 
         <div class="project-page-divider"></div>
 
         <div class="tl-section">
-          <p class="tl-label">Overview</p>
-          <h2 class="tl-heading">Giving back to the spaces that shaped me.</h2>
-          <p class="tl-text">I grew up in libraries. Not just as a place to read - as a community. Libraries were where I felt safe, intellectually alive, and welcome when a lot of other spaces didn&rsquo;t feel that way. They were a formative part of how I came to love learning and ideas.</p>
-          <p class="tl-text">Now I serve them. As a Youth Advisory Member at the Milton Public Library, I contribute to programming, digital literacy, and strategic direction.</p>
+          <p class="tl-label">The Org</p>
+          <h2 class="tl-heading">Championing international students &mdash; their stories, their futures.</h2>
+          <p class="tl-text">Borderless was founded by a former low-income international student who knew firsthand how isolating and opaque the process of studying abroad can be. The platform spreads the stories of international students and provides trustworthy college-admissions counseling and AI tools &mdash; built for people who don&rsquo;t have a guidance counselor who&rsquo;s done this before.</p>
+          <p class="tl-text">It reaches over 200,000 readers, 100K+ monthly social views, and nearly 50,000 Instagram followers. The audience is global, and so is the impact.</p>
         </div>
 
         <div class="project-page-divider"></div>
 
         <div class="tl-section">
-          <p class="tl-label">What I Do</p>
-          <ul class="tl-role-list">
-            <li>Design and run children&rsquo;s programming that builds early literacy and curiosity</li>
-            <li>Teach coding and digital literacy workshops for young learners</li>
-            <li>Provide strategic input on book acquisitions - advising on titles that reflect the community</li>
-            <li>Represent the youth perspective in library planning and direction</li>
-          </ul>
+          <p class="tl-label">Reach</p>
+          <div class="svc-stat-row">
+            <div class="svc-stat">
+              <span class="svc-stat-num">200K+</span>
+              <span class="svc-stat-label">Readers</span>
+            </div>
+            <div class="svc-stat">
+              <span class="svc-stat-num">100K+</span>
+              <span class="svc-stat-label">Monthly social views</span>
+            </div>
+            <div class="svc-stat">
+              <span class="svc-stat-num">50K</span>
+              <span class="svc-stat-label">Instagram followers</span>
+            </div>
+          </div>
         </div>
 
         <div class="project-page-divider"></div>
 
         <div class="tl-section">
-          <p class="tl-label">Why Libraries</p>
+          <p class="tl-label">My Role</p>
+          <h2 class="tl-heading">Journalism Intern.</h2>
+          <p class="tl-text">I interview international students about their journeys and write their stories. The process involves research, outreach, sourcing, and writing &mdash; and a lot of listening.</p>
+          <p class="tl-text">These articles have real impact. Students who don&rsquo;t see themselves represented in college admissions, who dream of leaving their countries &mdash; they read these. I used to read them myself, before I came to Canada. Many of the students I now interview have read them too.</p>
           <div class="tl-callout">
-            Libraries are one of the last truly public, truly open spaces. Free to enter, free to stay, free to learn. That&rsquo;s not nothing. That&rsquo;s everything.
+            It&rsquo;s full circle. And I love it.
           </div>
-          <p class="tl-text">The work I do here isn&rsquo;t glamorous - it&rsquo;s storytime planning, book lists, coding sessions for kids who may or may not care. But it&rsquo;s the kind of quiet, consistent work that actually builds communities. Libraries showed up for me. I show up for them.</p>
         </div>
 
       </div>
@@ -103,9 +119,11 @@
     <button class="mobile-nav-close" id="mobile-nav-close">&#x2715;</button>
     <nav class="mobile-nav-links">
       <a href="../index.html#about" class="mobile-nav-link"><span class="mobile-nav-num">01</span>ABOUT</a>
-      <a href="../index.html#work" class="mobile-nav-link"><span class="mobile-nav-num">02</span>WORK</a>
-      <a href="../index.html#writing" class="mobile-nav-link"><span class="mobile-nav-num">03</span>WRITING</a>
-      <a href="../index.html#notes" class="mobile-nav-link"><span class="mobile-nav-num">04</span>NOTES</a>
+      <a href="../index.html#work" class="mobile-nav-link"><span class="mobile-nav-num">02</span>PROJECTS</a>
+      <a href="../index.html#beyond" class="mobile-nav-link"><span class="mobile-nav-num">03</span>BEYOND</a>
+      <a href="../index.html#impact" class="mobile-nav-link"><span class="mobile-nav-num">04</span>IMPACT</a>
+      <a href="../index.html#writing" class="mobile-nav-link"><span class="mobile-nav-num">05</span>WRITING</a>
+      <a href="../index.html#notes" class="mobile-nav-link"><span class="mobile-nav-num">06</span>NOTES</a>
     </nav>
   </div>
   <script src="../js/mobile-nav.js"></script>

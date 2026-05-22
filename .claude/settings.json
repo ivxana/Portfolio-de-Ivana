@@ -57,7 +57,10 @@
       "Bash(ls assets/article-*.jpg assets/article-*.png)",
       "Bash(dir assets\\\\article-* /b)",
       "Bash(findstr -i recircle)",
-      "Bash(findstr -i knight)"
+      "Bash(findstr -i knight)",
+      "Bash(findstr -i \"newservice\")",
+      "Bash(findstr -i \"lawthingyw\\\\|competitionhero\\\\|deca\")",
+      "Bash(findstr -i \"unspun\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\Esther\\Downloads",
