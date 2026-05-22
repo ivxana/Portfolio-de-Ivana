@@ -1160,7 +1160,10 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
     padding-bottom: 12px;
   }
   .beyond-grid::-webkit-scrollbar { display: none; }
-  .beyond-card { flex: 0 0 260px; scroll-snap-align: start; }
+  .beyond-comp-card { flex: 0 0 78vw; scroll-snap-align: start; }
+  .beyond-comp-card h3 { font-size: 22px; margin-bottom: 14px; }
+  .beyond-comp-card p { font-size: 14px; line-height: 1.85; margin-bottom: 22px; }
+  .beyond-comp-logos { margin-bottom: 22px; }
 
   .impact-section { padding: 48px 20px; }
   .impact-org-grid {
