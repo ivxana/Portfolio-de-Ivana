@@ -239,6 +239,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   height: 100%;
   display: flex;
   align-items: flex-end;
+  padding: 0 24px 0 16px;
 }
 
 .photo-frame img {
