@@ -1910,12 +1910,13 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
    RESPONSIVE
    ============================================================ */
 
-/* ---- Tablet (769px – 1024px) ---- */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* ---- Tablet (769px – 1199px) ---- */
+@media (min-width: 769px) and (max-width: 1199px) {
   /* Hero */
   .hero { grid-template-columns: 1fr 300px; min-height: 72vh; }
   .hero-right { display: none; }
   .hero-left { padding: 48px 32px; }
+  .photo-frame img { height: 100%; }
 
   /* Work */
   .work-section { padding: 48px 32px; }
