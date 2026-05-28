@@ -1910,44 +1910,6 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
    RESPONSIVE
    ============================================================ */
 
-/* ---- Tablet (769px – 1400px) ---- */
-@media (min-width: 769px) and (max-width: 1400px) {
-  /* Hero */
-  .hero { grid-template-columns: 1fr 300px; min-height: 72vh; }
-  .hero-right { display: none; }
-  .hero-left { padding: 48px 32px; }
-  .hero-photo .photo-frame img { height: 100% !important; }
-
-  /* Work */
-  .work-section { padding: 48px 32px; }
-  .featured-grid { grid-template-columns: repeat(2, 1fr); }
-  .secondary-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* Beyond & Impact */
-  .beyond-section { padding: 48px 32px; }
-  .impact-section { padding: 48px 32px; }
-  .impact-org-grid { grid-template-columns: 1fr; }
-  .impact-org-card-wide { grid-column: auto; }
-
-  /* Writing */
-  .writing-section { padding: 48px 32px; }
-  .writing-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* Notes */
-  .notes-articles-section { padding: 32px 32px 48px; }
-  .articles-grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* Quote + Notes */
-  .quote-notes-section { grid-template-columns: 300px 1fr; }
-
-  /* Beliefs */
-  .beliefs-section { grid-template-columns: 1fr 1fr; }
-  .sticky-col { border-right: none; border-top: 1px solid var(--gray-light); }
-  .currently-col { border-top: 1px solid var(--gray-light); }
-
-  /* Footer */
-  .footer { padding: 48px 32px; }
-}
 
 @media (max-width: 1100px) {
   .hero { grid-template-columns: 1fr 280px; }
