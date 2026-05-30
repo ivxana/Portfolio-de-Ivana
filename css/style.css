@@ -1912,10 +1912,11 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 /* ---- Tablet (769px – 1024px) ---- */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr 300px; min-height: 70vh; }
+  .hero { grid-template-columns: 1fr 300px; min-height: 0; }
   .hero-right { display: none; }
   .hero-left { padding: 48px 32px; }
-  .hero-photo .photo-frame img { margin-top: auto; }
+  .hero-photo .photo-frame { align-items: stretch; }
+  .hero-photo .photo-frame img { height: 100%; margin-top: 0; }
 
   .work-section { padding: 48px 32px; }
   .featured-grid { grid-template-columns: repeat(2, 1fr); }
