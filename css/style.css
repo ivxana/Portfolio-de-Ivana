@@ -1936,6 +1936,13 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .footer { padding: 48px 32px; }
 }
 
+/* ---- Large tablet / iPad landscape (1025px – 1366px) ---- */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .hero { grid-template-columns: 1fr 320px 280px; min-height: 80vh; }
+  .hero-photo { max-height: 600px; }
+  .photo-brush { display: none; }
+  .photo-frame img { height: 100%; object-position: center 15%; }
+}
 
 @media (max-width: 1100px) {
   .hero { grid-template-columns: 1fr 280px; }
