@@ -1915,8 +1915,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .hero { grid-template-columns: 1fr 300px; min-height: 0; }
   .hero-right { display: none; }
   .hero-left { padding: 48px 32px; }
-  .hero-photo .photo-frame { align-items: stretch; }
-  .hero-photo .photo-frame img { height: 50%; margin-top: 0; object-position: center 20%; }
+  .hero-photo { min-height: 500px; }
+  .hero-photo .photo-frame { align-items: flex-end; height: 100%; }
+  .hero-photo .photo-frame img { height: 75%; object-position: center top; }
 
   .work-section { padding: 48px 32px; }
   .featured-grid { grid-template-columns: repeat(2, 1fr); }
