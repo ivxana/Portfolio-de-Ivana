@@ -709,6 +709,115 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 .view-project:hover { opacity: 0.7; }
 
 /* ============================================================
+   RIGHT NOW SECTION
+   ============================================================ */
+.right-now-section {
+  padding: 80px 60px;
+  background: var(--white);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.right-now-section .section-header-row { margin-bottom: 48px; }
+.right-now-section .section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 8px;
+  display: block;
+}
+.right-now-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--purple);
+  margin: 0;
+}
+.right-now-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.right-now-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  border-radius: 12px;
+  border: 1px solid rgba(28,2,82,0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.right-now-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(28,2,82,0.1);
+}
+.right-now-card-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+.right-now-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.right-now-card-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background: rgba(28,2,82,0.06);
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--purple);
+  opacity: 0.5;
+}
+.right-now-card-body {
+  padding: 20px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.right-now-card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0;
+  line-height: 1.2;
+}
+.right-now-card-role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(28,2,82,0.5);
+  text-transform: uppercase;
+  margin: -4px 0 0;
+}
+.right-now-card-desc {
+  font-size: 13px;
+  color: rgba(28,2,82,0.65);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+.right-now-card-view {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-top: 6px;
+}
+.right-now-card-no-link { cursor: default; }
+.right-now-card-no-link:hover { transform: none; box-shadow: none; }
+
+/* ============================================================
    WRITING SECTION
    ============================================================ */
 .writing-section {
@@ -1028,6 +1137,162 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 }
 
 /* ============================================================
+   AT STFX SECTION
+   ============================================================ */
+.stfx-section {
+  padding: 80px 60px;
+  background: var(--white);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.stfx-section .section-header-row { margin-bottom: 48px; }
+.stfx-section .section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--purple);
+  opacity: 0.5;
+  margin-bottom: 8px;
+  display: block;
+}
+.stfx-section .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--purple);
+  margin: 0;
+}
+.stfx-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.stfx-card {
+  display: block;
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 32px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+a.stfx-card:hover { opacity: 0.8; }
+.stfx-card-no-link { cursor: default; }
+.stfx-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: rgba(28,2,82,0.07);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.stfx-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+.stfx-role {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(28,2,82,0.5);
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+.stfx-card p:not(.stfx-role) {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(28,2,82,0.65);
+  margin: 0 0 18px;
+}
+.stfx-card .beyond-view { margin-top: 0; }
+
+/* ============================================================
+   TKS CALLOUT
+   ============================================================ */
+.tks-callout-section {
+  padding: 48px 60px;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(28,2,82,0.08);
+}
+.tks-callout {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: var(--white);
+  border: 1px solid rgba(28,2,82,0.1);
+  border-radius: 14px;
+  padding: 32px 40px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.tks-callout:hover { opacity: 0.8; }
+.tks-callout-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: var(--cream);
+  border: 1px solid rgba(28,2,82,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  flex-shrink: 0;
+}
+.tks-callout-logo img { width: 100%; height: 100%; object-fit: contain; }
+.tks-callout-body { flex: 1; min-width: 0; }
+.tks-callout-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(28,2,82,0.45);
+  margin-bottom: 10px;
+}
+.tks-callout-completed {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: rgba(28,2,82,0.08);
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+.tks-callout-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 0 0 8px;
+}
+.tks-callout-desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(28,2,82,0.65);
+  margin: 0;
+  max-width: 640px;
+}
+.tks-callout-view {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  opacity: 0.5;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ============================================================
    SOCIAL IMPACT SECTION
    ============================================================ */
 .impact-section {
@@ -1147,6 +1412,39 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   opacity: 0.4;
   margin-top: auto;
 }
+.impact-org-card-no-link { cursor: default; }
+.impact-org-card-no-link:hover { transform: none; box-shadow: none; }
+.impact-org-dates {
+  font-size: 10px;
+  color: rgba(28,2,82,0.4);
+  margin: 3px 0 0;
+}
+.impact-org-grid-featured {
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 16px;
+}
+.impact-more-header {
+  margin: 40px 0 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(28,2,82,0.08);
+}
+.impact-more-header .secondary-projects-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(28,2,82,0.4);
+}
+.impact-org-grid-more {
+  grid-template-columns: repeat(3, 1fr);
+}
+.impact-org-card-sm {
+  padding: 20px 18px;
+}
+.impact-org-card-sm .impact-org-logo,
+.impact-org-card-sm .impact-org-logo-blank { width: 32px; height: 32px; }
+.impact-org-card-sm .impact-org-name { font-size: 13px; }
+.impact-org-card-sm .impact-org-desc { font-size: 12px; margin-bottom: 14px; }
 
 @media (max-width: 768px) {
   .beyond-section { padding: 48px 20px; }
@@ -1918,12 +2216,20 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .hero-photo .photo-frame { align-items: stretch; }
   .hero-photo .photo-frame img { height: 50%; margin-top: 0; object-position: center 20%; }
 
+  .right-now-section { padding: 48px 32px; }
+  .right-now-grid { grid-template-columns: repeat(2, 1fr); }
+
   .work-section { padding: 48px 32px; }
   .featured-grid { grid-template-columns: repeat(2, 1fr); }
   .secondary-grid { grid-template-columns: repeat(2, 1fr); }
 
   .beyond-section { padding: 48px 32px; }
+  .stfx-section { padding: 48px 32px; }
+  .stfx-grid { grid-template-columns: repeat(2, 1fr); }
+  .tks-callout-section { padding: 40px 32px; }
   .impact-section { padding: 48px 32px; }
+  .impact-org-grid-featured,
+  .impact-org-grid-more { grid-template-columns: repeat(2, 1fr); }
 
   .writing-section { padding: 48px 32px; }
   .writing-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1998,6 +2304,56 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .secondary-grid::-webkit-scrollbar { display: none; }
   .secondary-card { flex: 0 0 75vw; scroll-snap-align: start; }
   .secondary-projects-header { flex-direction: column; gap: 4px; }
+
+  /* ---- Right now section → carousel ---- */
+  .right-now-section { padding: 48px 20px; }
+  .right-now-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    padding-bottom: 12px;
+  }
+  .right-now-grid::-webkit-scrollbar { display: none; }
+  .right-now-card { flex: 0 0 85vw; scroll-snap-align: start; }
+
+  /* ---- At STFX section → carousel ---- */
+  .stfx-section { padding: 48px 20px; }
+  .stfx-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .stfx-grid::-webkit-scrollbar { display: none; }
+  .stfx-card { flex: 0 0 82vw; scroll-snap-align: start; }
+
+  /* ---- TKS callout ---- */
+  .tks-callout-section { padding: 32px 20px; }
+  .tks-callout { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 16px; }
+  .tks-callout-view { align-self: flex-start; }
+
+  /* ---- Social impact tiers ---- */
+  .impact-org-grid-featured,
+  .impact-org-grid-more {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+  .impact-org-grid-featured::-webkit-scrollbar,
+  .impact-org-grid-more::-webkit-scrollbar { display: none; }
+  .impact-org-grid-featured .impact-org-card { flex: 0 0 280px; scroll-snap-align: start; }
+  .impact-org-grid-more .impact-org-card-sm { flex: 0 0 240px; scroll-snap-align: start; }
+  .impact-more-header { margin: 24px 0 16px; padding-top: 16px; }
 
   /* ---- Writing section → carousel ---- */
   .writing-section { padding: 48px 20px; }
